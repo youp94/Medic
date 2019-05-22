@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<MedicForm> medicForms = new ArrayList<>();
 
-    /*Process process = new Process("Process name", "Very long process description text");
-    ArrayList<Process> processes = new ArrayList<>();*/
+    Process process = new Process("Process name", "Very long process description text");
+    ArrayList<Process> processes = new ArrayList<>();
 
     Medic medic2 = new Medic("Ibuprofen", "Very long medic description text");
 
@@ -57,10 +57,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*processes.add(process);
         processes.add(process);
-        processes.add(process);
-        medicForm.setProcessArrayList(processes);*/
+        medicForm.setProcessArrayList(processes);
+        medicForm2.setProcessArrayList(processes);
+        medicForm3.setProcessArrayList(processes);
+        medicForm4.setProcessArrayList(processes);
+        medic2Form.setProcessArrayList(processes);
 
         medicForms.add(medicForm);
         medicForms.add(medicForm2);
