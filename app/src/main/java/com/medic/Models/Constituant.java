@@ -2,15 +2,15 @@ package com.medic.Models;
 
 import java.util.ArrayList;
 
-public class Constituants {
+public class Constituant {
 
     String name;
     String grade;
     ArrayList<String> properties;
-    float quantity;
+    double quantity;
     String ref;
 
-    public Constituants(String name, String grade, ArrayList<String> properties, float quantity, String ref) {
+    public Constituant(String name, String grade, ArrayList<String> properties, double quantity, String ref) {
         this.name = name;
         this.grade = grade;
         this.properties = properties;
@@ -42,11 +42,11 @@ public class Constituants {
         this.properties = properties;
     }
 
-    public float getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(float quantity) {
+    public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
 

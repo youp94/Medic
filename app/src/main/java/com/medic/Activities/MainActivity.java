@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.medic.Models.Constituant;
+import com.medic.Models.Formula;
 import com.medic.Models.Medic;
 import com.medic.Models.MedicForm;
 import com.medic.Models.MedicalClass;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     MedicalClass medicalClass1 = new MedicalClass("Analgesics- antipyretics – antispasmodics", "Very long description text");
     ArrayList<MedicalClass> medicalClassArrayList = new ArrayList<>();
 
+    ArrayList<Medic> medics = new ArrayList<>();
+
     Medic medic = new Medic("Acetaminophen", "Very long medic description text");
 
     MedicForm medicForm = new MedicForm("Direct compression", "Very long medic form description text");
@@ -35,17 +39,60 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<MedicForm> medicForms = new ArrayList<>();
 
-    Process process = new Process("Process name", "Very long process description text");
-    ArrayList<Process> processes = new ArrayList<>();
-
     Medic medic2 = new Medic("Ibuprofen", "Very long medic description text");
 
     MedicForm medic2Form = new MedicForm("Tablet", "Very long medic form description text");
 
     ArrayList<MedicForm> medic2Forms = new ArrayList<>();
 
+    Process process = new Process("Process name", "Very long process description text");
+    ArrayList<Process> processes = new ArrayList<>();
 
-    ArrayList<Medic> medics = new ArrayList<>();
+    Constituant constituant1 = new Constituant(
+            "Acetamenophen",
+            "DC 90 USP",
+            new ArrayList<String>(),
+            80.0,
+            ""
+    );
+    Constituant constituant2 = new Constituant(
+            "Microcrystalline cellulose coprocessed 2% w/w colloidal silicon dioxide",
+            "",
+            new ArrayList<String>(),
+            17.6,
+            ""
+    );
+    Constituant constituant3 = new Constituant(
+            "Colloidal silicon dioxide (CSD)",
+            "Cab-O-Sil PTG",
+            new ArrayList<String>(),
+            0.5,
+            ""
+    );
+    Constituant constituant4 = new Constituant(
+            "Sodium starch glycolate (SSG)",
+            "EXPLOTAB",
+            new ArrayList<String>(),
+            1.5,
+            ""
+    );
+    Constituant constituant5 = new Constituant(
+            "Sodium stearyl fumarate (SSF)",
+            "PRUV",
+            new ArrayList<String>(),
+            0.4,
+            ""
+    );
+    Constituant constituant6 = new Constituant(
+            "Sodium stearyl fumarate (SSF)",
+            "PRUV",
+            new ArrayList<String>(),
+            0.4,
+            ""
+    );
+    ArrayList<Constituant> constituants = new ArrayList<>();
+
+    Formula formula = new Formula("Direct compression", "Description", constituants);
 
 
     MainAdapter mainAdapter = new MainAdapter(this, medicalClassArrayList);
@@ -56,6 +103,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        constituants.add(constituant1);
+        constituants.add(constituant2);
+        constituants.add(constituant3);
+        constituants.add(constituant4);
+        constituants.add(constituant5);
+        constituants.add(constituant6);
+
+        process.setFormula(formula);
 
         processes.add(process);
         medicForm.setProcessArrayList(processes);
