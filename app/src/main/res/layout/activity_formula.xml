@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Constituants"
+        android:text="Formula"
         android:textSize="50sp"
         android:textColor="#000"
         android:gravity="center"

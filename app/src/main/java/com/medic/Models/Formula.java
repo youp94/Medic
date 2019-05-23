@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class Formula implements Serializable {
 
+    private String refBrevet;
     private String name;
     private String description;
     private ArrayList<Constituant> constituants;
@@ -15,6 +16,13 @@ public class Formula implements Serializable {
     }
 
     public Formula(String name, String description, ArrayList<Constituant> constituants) {
+        this.name = name;
+        this.description = description;
+        this.constituants = constituants;
+    }
+
+    public Formula(String refBrevet, String name, String description, ArrayList<Constituant> constituants) {
+        this.refBrevet = refBrevet;
         this.name = name;
         this.description = description;
         this.constituants = constituants;
@@ -42,5 +50,13 @@ public class Formula implements Serializable {
 
     public void setConstituants(ArrayList<Constituant> constituants) {
         this.constituants = constituants;
+    }
+
+    public String getRefBrevet() {
+        return refBrevet;
+    }
+
+    public void setRefBrevet(String refBrevet) {
+        this.refBrevet = refBrevet;
     }
 }
