@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.medic.Models.MedicForm;
 import com.medic.R;
@@ -88,9 +89,13 @@ class MedicFormAdapter extends BaseAdapter{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ProcessActivity.class);
-                intent.putExtra("medicList", medic.getProcessArrayList());
-                context.startActivity(intent);
+                if(medic.getProcessArrayList() != null) {
+                    Intent intent = new Intent(context, ProcessActivity.class);
+                    intent.putExtra("medicList", medic.getProcessArrayList());
+                    context.startActivity(intent);
+                }else{
+                    Toast.makeText(context, "No fabrication process added", Toast.LENGTH_LONG).show();
+                }
             }
         });
 

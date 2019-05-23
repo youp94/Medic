@@ -2,7 +2,9 @@ package com.medic.Activities;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -93,9 +95,14 @@ class ConstituantsAdapter extends BaseAdapter {
         refButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(context, MedicActivity.class);
-                //intent.putExtra("medicList", medicalClass.getMedicArrayList());
-                //context.startActivity(intent);
+                new AlertDialog.Builder(context)
+                        .setTitle("Reference")
+                        .setMessage(constituant.getRef())
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // Continue with delete operation
+                            }
+                        }).show();
             }
         });
 
