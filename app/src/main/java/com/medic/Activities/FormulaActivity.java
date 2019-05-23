@@ -1,14 +1,30 @@
 package com.medic.Activities;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 
+import com.medic.Models.Constituant;
 import com.medic.Models.Formula;
 import com.medic.R;
+
+import java.util.ArrayList;
 
 public class FormulaActivity extends AppCompatActivity {
 
     Formula formula;
+
+    ConstituantsAdapter mainAdapter = null;
+    ListView listView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,5 +33,81 @@ public class FormulaActivity extends AppCompatActivity {
 
         formula = (Formula) getIntent().getSerializableExtra("formula");
 
+        listView = findViewById(R.id.constituant_list);
+        mainAdapter = new ConstituantsAdapter(this, formula.getConstituants());
+        listView.setAdapter(mainAdapter);
+
+    }
+}
+
+
+class ConstituantsAdapter extends BaseAdapter {
+
+    private Context context;
+    private ArrayList<Constituant> constituants;
+
+    ConstituantsAdapter(Context context, ArrayList<Constituant> medicalClassArrayList) {
+        this.context = context;
+        this.constituants = medicalClassArrayList;
+    }
+
+    @Override
+    public int getCount() {
+        return constituants.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return constituants.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public View getView(int position, final View convertView, ViewGroup parent) {
+        final Constituant constituant = constituants.get(position);
+
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        @SuppressLint({"ViewHolder", "InflateParams"}) View view = inflater.inflate(R.layout.constituant_item,null, false);
+
+        TextView titleText;
+        TextView gradText;
+        TextView quanText;
+        Button refButton;
+        Button propsButton;
+
+        titleText = view.findViewById(R.id.constituant_title);
+        gradText = view.findViewById(R.id.constituant_grade);
+        quanText = view.findViewById(R.id.constituant_quantity);
+        refButton = view.findViewById(R.id.constituant_ref);
+        propsButton = view.findViewById(R.id.constituant_prop);
+
+        titleText.setText(constituant.getName());
+        String grade = "Grade" + constituant.getGrade();
+        gradText.setText(grade);
+        String quantity = "Quantity" + constituant.getQuantity();
+        quanText.setText(quantity);
+        refButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent intent = new Intent(context, MedicActivity.class);
+                //intent.putExtra("medicList", medicalClass.getMedicArrayList());
+                //context.startActivity(intent);
+            }
+        });
+
+        propsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent intent = new Intent(context, MedicActivity.class);
+                //intent.putExtra("medicList", medicalClass.getMedicArrayList());
+                //context.startActivity(intent);
+            }
+        });
+
+        return view;
     }
 }

@@ -1,8 +1,9 @@
 package com.medic.Models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Constituant {
+public class Constituant implements Serializable {
 
     String name;
     String grade;

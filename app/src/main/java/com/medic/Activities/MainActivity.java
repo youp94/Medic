@@ -84,10 +84,10 @@ public class MainActivity extends AppCompatActivity {
             ""
     );
     Constituant constituant6 = new Constituant(
-            "Sodium stearyl fumarate (SSF)",
-            "PRUV",
+            "Microcrystalline cellulose",
+            "EMOCOCEL 90M",
             new ArrayList<String>(),
-            0.4,
+            0,
             ""
     );
     ArrayList<Constituant> constituants = new ArrayList<>();
