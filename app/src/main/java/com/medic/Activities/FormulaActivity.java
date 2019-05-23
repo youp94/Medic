@@ -109,9 +109,9 @@ class ConstituantsAdapter extends BaseAdapter {
         propsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(context, MedicActivity.class);
-                //intent.putExtra("medicList", medicalClass.getMedicArrayList());
-                //context.startActivity(intent);
+                Intent intent = new Intent(context, PropertiesActivity.class);
+                intent.putExtra("props", constituant.getProperties());
+                context.startActivity(intent);
             }
         });
 
