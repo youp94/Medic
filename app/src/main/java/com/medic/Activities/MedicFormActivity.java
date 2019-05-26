@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.medic.Models.Formula;
 import com.medic.Models.MedicForm;
 import com.medic.R;
 
@@ -90,9 +91,15 @@ class MedicFormAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
                 if(medic.getProcessArrayList() != null) {
-                    Intent intent = new Intent(context, ProcessActivity.class);
-                    intent.putExtra("medicList", medic.getProcessArrayList());
-                    context.startActivity(intent);
+                    if (medic.getName() == "Tablet") {
+                        Intent intent = new Intent(context, ProcessActivity.class);
+                        intent.putExtra("medicList", medic.getProcessArrayList());
+                        context.startActivity(intent);
+                    }else{
+                        Intent intent = new Intent(context, FormulaActivity.class);
+                        intent.putExtra("formula", medic.getProcessArrayList().get(0).getFormula());
+                        context.startActivity(intent);
+                    }
                 }else{
                     Toast.makeText(context, "No fabrication process added", Toast.LENGTH_LONG).show();
                 }

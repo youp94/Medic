@@ -154,6 +154,85 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    /********************************************* Medicament 1 form 2 process ********************************/
+
+    Process process2 = new Process("", "Very long process description text");
+    ArrayList<Process> processes2 = new ArrayList<>();
+
+
+    /********************************************** Medicament 1 form 2 process formula *********************************/
+    Constituant constituant21 = new Constituant(
+            "Acetamenophen",
+            "",
+            "    • Crystal form: Monoclinic type I.\n" +
+                    "    • Space group: P21/n.\n" +
+                    "    • pH in an aqueous solution: 5 - 6.5.\n" +
+                    "    • Solubility in water at 20°C: 1.4 g/100ml.",
+            1,
+            "N. Al-Zoubi, J.E. Koundourellis, S. Malamataris. FT-IR and Raman spectroscopic methods for identification and quantitation of orthorhombic and monoclinic paracetamol in powder mixes. «Journal of Pharmaceutical and Biomedical Analysis», 2002.\n" +
+                    "\n" +
+                    "G. L. Perlovich, Tatyana V. Volkova and Annette Bauer-Brandl. POLYMORPHISM OF PARACETAMOL: Relative stability of the monoclinic and orthorhombic phase revisited by sublimation and solution calorimetry. «Journal of Thermal Analysis and Calorimetry», September, 2007, vol.89.\n" +
+                    "\n" +
+                    "John F. Kauffman, Linda M. Batykefer, David D. Tuschel. Raman detected differential scanning calorimetry of polymorphic transformations in acetaminophen. «Journal of Pharmaceutical and Biomedical Analysis», 2008.",
+            "g/100 ml"
+    );
+    Constituant constituant22 = new Constituant(
+            "Monosodium phosphate dihydrate",
+            "Injectable grade",
+            "    • Buffering agent.\n",
+            0.1002,
+            "",
+            "g/100 ml"
+    );
+    Constituant constituant23 = new Constituant(
+            "Disodium phosphate dihydrate",
+            "Injectable grade",
+            "     • Buffering agent.\n",
+            0.0785,
+            "",
+            "g/100 ml"
+    );
+    Constituant constituant24 = new Constituant(
+            "Sodium chloride",
+            "Injectable grade",
+            "     • Isotonic agent.\n" +
+                    "    • Density: 1.2 g/cm3 for a saturated aqueous solution.\n" +
+                    "    • Density (bulk): 0.93 g/cm3.\n" +
+                    "    • Density (tapped): 1.09 g/cm3.\n" +
+                    "    • pH : 6.7-7.3 for a saturated aqueous solution.\n" +
+                    "    • Solubility at 20°C in water: 1 in 2.8.\n" +
+                    "    • Osmolarity: iso-osmotic with serum.",
+            0.65,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe. Sodium chloride. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 637-640.",
+            "g/100 ml"
+    );
+    Constituant constituant25 = new Constituant(
+            "Water",
+            "Injectable grade",
+            "",
+            100,
+            "",
+            "ml"
+    );
+    ArrayList<Constituant> constituants2 = new ArrayList<>();
+
+
+    Step step21 = new Step(" Mixing :\n" +
+            "    • Acetaminophen.\n" +
+            "    • Ultrapurified water for injection.\n" +
+            "    • Monosodium phosphate dihydrate and disodium phosphate dihydrate. \n" +
+            "    • Sodium chloride.");
+    Step step22 = new Step("Heating the mixture.");
+    Step step23 = new Step("Filling of bottles.");
+    Step step24 = new Step("Sterilizing bottles by therm.");
+    ArrayList<Step> steps2 = new ArrayList<>();
+
+    Formula formula2 = new Formula("","Injection", "Description", constituants2, steps2);
+
+    /**********************************************************************************************************************/
+
+
+
     /************************************ Medicament 2 *************************************************************/
 
     Medic medic2 = new Medic("Ibuprofen", "Very long medic description text");
@@ -170,6 +249,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /********************************** form 1 ***************************************/
 
         steps.add(step1);
         steps.add(step2);
@@ -188,10 +269,26 @@ public class MainActivity extends AppCompatActivity {
 
         processes.add(process);
         medicForm.setProcessArrayList(processes);
-        /*medicForm2.setProcessArrayList(processes);
-        medicForm3.setProcessArrayList(processes);
-        medicForm4.setProcessArrayList(processes);
-        medic2Form.setProcessArrayList(processes);*/
+
+        /*************************************** form 2 **********************************************/
+
+        steps2.add(step21);
+        steps2.add(step22);
+        steps2.add(step23);
+        steps2.add(step24);
+
+        constituants2.add(constituant21);
+        constituants2.add(constituant22);
+        constituants2.add(constituant23);
+        constituants2.add(constituant24);
+        constituants2.add(constituant25);
+
+        process2.setFormula(formula2);
+
+        processes2.add(process2);
+        medicForm2.setProcessArrayList(processes2);
+
+        /************************************************* form 3 ***********************************************/
 
         medicForms.add(medicForm);
         medicForms.add(medicForm2);
