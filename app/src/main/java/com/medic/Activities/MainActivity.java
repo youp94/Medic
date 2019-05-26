@@ -32,10 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
     Medic medic = new Medic("Acetaminophen", "Very long medic description text");
 
-    MedicForm medicForm = new MedicForm("Direct compression", "Very long medic form description text");
+    MedicForm medicForm = new MedicForm("Tablet", "Very long medic form description text");
     MedicForm medicForm2 = new MedicForm("Injectable", "Very long medic form description text");
-    MedicForm medicForm3 = new MedicForm("Sugar free", "Very long medic form description text");
-    MedicForm medicForm4 = new MedicForm("Syrop", "Very long medic form description text");
+    MedicForm medicForm4 = new MedicForm("Syrup", "Very long medic form description text");
 
     ArrayList<MedicForm> medicForms = new ArrayList<>();
 
@@ -175,7 +174,6 @@ public class MainActivity extends AppCompatActivity {
 
         medicForms.add(medicForm);
         medicForms.add(medicForm2);
-        medicForms.add(medicForm3);
         medicForms.add(medicForm4);
         medic.setMedicFormArrayList(medicForms);
 

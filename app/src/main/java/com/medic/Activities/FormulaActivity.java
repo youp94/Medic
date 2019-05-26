@@ -88,9 +88,9 @@ class ConstituantsAdapter extends BaseAdapter {
         propsButton = view.findViewById(R.id.constituant_prop);
 
         titleText.setText(constituant.getName());
-        String grade = "Grade" + constituant.getGrade();
+        String grade = "Grade: " + constituant.getGrade();
         gradText.setText(grade);
-        String quantity = "Quantity" + constituant.getQuantity();
+        String quantity = "Quantity: " + constituant.getQuantity();
         quanText.setText(quantity);
         refButton.setOnClickListener(new View.OnClickListener() {
             @Override
