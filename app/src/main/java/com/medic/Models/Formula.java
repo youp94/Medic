@@ -9,6 +9,15 @@ public class Formula implements Serializable {
     private String name;
     private String description;
     private ArrayList<Constituant> constituants;
+    private ArrayList<Step> steps;
+
+    public Formula(String refBrevet, String name, String description, ArrayList<Constituant> constituants, ArrayList<Step> steps) {
+        this.refBrevet = refBrevet;
+        this.name = name;
+        this.description = description;
+        this.constituants = constituants;
+        this.steps = steps;
+    }
 
     public Formula(String name, String description) {
         this.name = name;
@@ -58,5 +67,13 @@ public class Formula implements Serializable {
 
     public void setRefBrevet(String refBrevet) {
         this.refBrevet = refBrevet;
+    }
+
+    public ArrayList<Step> getSteps() {
+        return steps;
+    }
+
+    public void setSteps(ArrayList<Step> steps) {
+        this.steps = steps;
     }
 }
