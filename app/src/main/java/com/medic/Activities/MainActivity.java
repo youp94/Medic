@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     MedicForm medicForm = new MedicForm("Tablet", "Very long medic form description text");
     MedicForm medicForm2 = new MedicForm("Injectable", "Very long medic form description text");
-    MedicForm medicForm4 = new MedicForm("Syrup", "Very long medic form description text");
+    MedicForm medicForm3 = new MedicForm("Syrup", "Very long medic form description text");
 
     ArrayList<MedicForm> medicForms = new ArrayList<>();
 
@@ -233,6 +233,177 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+    /********************************************* Medicament 1 form 3 process ********************************/
+
+    Process process3 = new Process("", "Very long process description text");
+    ArrayList<Process> processes3 = new ArrayList<>();
+
+
+    /********************************************** Medicament 1 form 3 process formula *********************************/
+    Constituant constituant31 = new Constituant(
+            "Acetaminophen",
+            "",
+            "    • Crystal form: Monoclinic type I.\n" +
+                    "    • Space group: P21/n.\n" +
+                    "    • pH in an aqueous solution: 5 - 6.5.\n" +
+                    "    • Solubility in water at 20°C: 1.4 g/100ml.",
+            33.33,
+            "N. Al-Zoubi, J.E. Koundourellis, S. Malamataris. FT-IR and Raman spectroscopic methods for identification and quantitation of orthorhombic and monoclinic paracetamol in powder mixes. «Journal of Pharmaceutical and Biomedical Analysis», 2002.\n" +
+                    "\n" +
+                    "G. L. Perlovich, Tatyana V. Volkova and Annette Bauer-Brandl. POLYMORPHISM OF PARACETAMOL: Relative stability of the monoclinic and orthorhombic phase revisited by sublimation and solution calorimetry. «Journal of Thermal Analysis and Calorimetry», September, 2007, vol.89.\n" +
+                    "\n" +
+                    "John F. Kauffman, Linda M. Batykefer, David D. Tuschel. Raman detected differential scanning calorimetry of polymorphic transformations in acetaminophen. «Journal of Pharmaceutical and Biomedical Analysis», 2008.",
+            "mg"
+    );
+    Constituant constituant32 = new Constituant(
+            "Acetaminophen/Guaifenesin",
+            "",
+            "    • Crystal form : orthorhombic.\n" +
+                    "    • Space group : P 212121.\n" +
+                    "    • Density : 1.2 ± 0.1 g/cm3.\n" +
+                    "    • Solubility in water: 5g/100 ml at 25°C.",
+            13.33,
+            "Alexander A. Bredikhin, and all. Absolute configuration and crystal packing for three chiral drugs prone to spontaneous resolution: Guaifenesin, methocarbamol and mephenesin. «Journal of Molecular Structure», 2008.",
+            "mg"
+    );
+    Constituant constituant33 = new Constituant(
+            "Propylene glycol (PG)",
+            "",
+            "    • Solvant.\n" +
+                    "    • Density: 1.038 g/cm3 at 20°C.\n" +
+                    "    • Surface tension: 40.1 mN/m at 25°C.",
+            125,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe. Propylene glycol. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 592-594.",
+            "mg"
+    );
+    Constituant constituant34 = new Constituant(
+            "Polyethylene glycol (PEG)",
+            "PEG 600",
+            "    • Solubilating agent.\n" +
+                    "    • Average molecular weight: 570- 613 amu.\n" +
+                    "    • Density: 1.08 g/cm3.\n" +
+                    "    • Surface tension: 44mN/m.",
+            350,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Polyethylene Glycol. In Handbook of pharmaceutical excipients, 6e ed. London: The Pharmaceutical Press, 2009, p.517-522.",
+            "mg"
+    );
+    Constituant constituant35 = new Constituant(
+            "Sucrose",
+            "60/200",
+            "    • Sweetening agent.\n" +
+                    "    • Crystalline form.\n" +
+                    "    • Density (bulk): 0.93 g/cm3.\n" +
+                    "    • Density (tapped): 1.03 g/cm3.\n" +
+                    "    • Density (true): 1.6 g/cm3.\n" +
+                    "    • Solubility in water at 20°C: 1 in 0.5.\n" +
+                    "    • Median particle size: 540µm.\n" +
+                    "    • Moisture content: it absorbs up to 1% water.",
+            250,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe. Sucrose. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 703-707.",
+            "mg"
+    );
+    Constituant constituant36 = new Constituant(
+            "Sorbitol",
+            "70/70",
+            "    • Sweetening agent.\n" +
+                    "    • Liquid (non crystalling).\n" +
+                    "    • pH: 4.5 - 7 for a 10% w/v aqueous solution.\n" +
+                    "    • Density (bulk): 0.448 g/cm3.\n" +
+                    "    • Density (tapped): 0.400 g/cm3.\n" +
+                    "    • Density (true): 1.507 g/cm3.\n" +
+                    "    • Moisture content: >60% at 25°C.",
+            125,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Sorbitol. In Handbook of pharmaceutical excipients, 6e ed. London: The Pharmaceutical Press, 2009, p.679-682.",
+            "mg"
+    );
+    Constituant constituant37 = new Constituant(
+            "Sucralose",
+            "",
+            "    • Sweetening agent.\n" +
+                    "    • pH: 5 – 6 for a 10% w/v aqueous solution at 20°C.\n" +
+                    "    • Density (bulk): 0.35 g/cm3.\n" +
+                    "    • Density (tapped): 0.62 g/cm3.\n" +
+                    "    • Density (true): 1.63 g/cm3.\n" +
+                    "    • Particle size distribution: 90%<12µm in size.\n" +
+                    "    • Viscosity: 0.6 – 3.8 mPa.s.",
+            5,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe. Sucralose. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 701-703.",
+            "mg"
+    );
+    Constituant constituant38 = new Constituant(
+            "Citric acid",
+            "",
+            "    • Preservative\n" +
+                    "    • Density: 1.665 g/cm3.\n" +
+                    "    • Solubility in water 133g/100ml at 20°C.\n" +
+                    "    • Viscosity: 6.5 mPa.s for a 50% w/v aqueous solution at 25°C.",
+            0.70,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe. Citric acid. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 181-183.",
+            "mg"
+    );
+    Constituant constituant39 = new Constituant(
+            "Sodium benzoate",
+            "",
+            "    • Antimicrobial preservative\n" +
+                    "    • Density: 1.497- 1.527 g/cm3 at 24°C.\n" +
+                    "    • Solubility in water at 20°C: 1 in 1.8.",
+            2,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe. Sodium benzoate. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 627-629.",
+            "mg"
+    );
+    Constituant constituant310 = new Constituant(
+            "Sodium carboxy methylcellulose",
+            "",
+            "",
+            2,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe.  Sodium carboxymethylcellulose. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p.118-121.",
+            "mg"
+    );
+    Constituant constituant311 = new Constituant(
+            "Natural peppermint flavor #104",
+            "",
+            "",
+            2,
+            "",
+            "mg"
+    );
+    Constituant constituant312 = new Constituant(
+            "FD&C Blue #1",
+            "",
+            "",
+            0.1,
+            "",
+            "mg"
+    );
+    Constituant constituant313 = new Constituant(
+            "Water",
+            "Purified water",
+            "In accordance with the pharmacopeia.",
+            0,
+            "",
+            "QS"
+    );
+    ArrayList<Constituant> constituants3 = new ArrayList<>();
+
+
+    Step step31 = new Step("A solution of liquid excipient was prepared using Polyethylene glycol and propylene glycol.");
+    Step step32 = new Step("Acetaminophen was dissolved in a solution of liquid excipient base under stirring.");
+    Step step33 = new Step("Guaifenesin was added to the acetaminophen solution obtained previously under stirring.");
+    Step step34 = new Step("Sodium benzoate, sucralose, citric acid and sorbitol was added successively to 20% of purified water and stirred.");
+    Step step35 = new Step("The solution of step 4 was added to the acetaminophen solution.");
+    Step step36 = new Step("Sodium carboxy methylcellulose soaked in 5% of purified water was prepared then added and stirred.");
+    Step step37 = new Step("Peppermint flavor, FD&C blue #1 was added to the mixture.");
+    Step step38 = new Step("The volume was made with purified water and filtered.");
+    Step step39 = new Step("The final solution was filled in bottles.");
+    ArrayList<Step> steps3 = new ArrayList<>();
+
+    Formula formula3 = new Formula("","Injection", "Description", constituants3, steps3);
+
+    /**********************************************************************************************************************/
+
+
+
     /************************************ Medicament 2 *************************************************************/
 
     Medic medic2 = new Medic("Ibuprofen", "Very long medic description text");
@@ -290,9 +461,41 @@ public class MainActivity extends AppCompatActivity {
 
         /************************************************* form 3 ***********************************************/
 
+        steps3.add(step31);
+        steps3.add(step32);
+        steps3.add(step33);
+        steps3.add(step34);
+        steps3.add(step35);
+        steps3.add(step36);
+        steps3.add(step37);
+        steps3.add(step38);
+        steps3.add(step39);
+
+        constituants3.add(constituant31);
+        constituants3.add(constituant32);
+        constituants3.add(constituant33);
+        constituants3.add(constituant34);
+        constituants3.add(constituant35);
+        constituants3.add(constituant36);
+        constituants3.add(constituant37);
+        constituants3.add(constituant38);
+        constituants3.add(constituant39);
+        constituants3.add(constituant310);
+        constituants3.add(constituant311);
+        constituants3.add(constituant312);
+        constituants3.add(constituant313);
+
+        process3.setFormula(formula3);
+
+        processes3.add(process3);
+        medicForm3.setProcessArrayList(processes3);
+
+
+
+
         medicForms.add(medicForm);
         medicForms.add(medicForm2);
-        medicForms.add(medicForm4);
+        medicForms.add(medicForm3);
         medic.setMedicFormArrayList(medicForms);
 
         medic2Forms.add(medic2Form);
