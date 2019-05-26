@@ -28,6 +28,8 @@ public class FormulaActivity extends AppCompatActivity {
     ConstituantsAdapter mainAdapter = null;
     ListView listView = null;
 
+    Button button = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,16 @@ public class FormulaActivity extends AppCompatActivity {
         listView = findViewById(R.id.constituant_list);
         mainAdapter = new ConstituantsAdapter(this, formula.getConstituants());
         listView.setAdapter(mainAdapter);
+
+        button = findViewById(R.id.formula_process);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FormulaActivity.this, FormulaProcessActivity.class);
+                intent.putExtra("steps", formula.getSteps());
+                startActivity(intent);
+            }
+        });
 
     }
 }

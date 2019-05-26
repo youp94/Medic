@@ -18,6 +18,7 @@ import com.medic.Models.Medic;
 import com.medic.Models.MedicForm;
 import com.medic.Models.MedicalClass;
 import com.medic.Models.Process;
+import com.medic.Models.Step;
 import com.medic.R;
 
 import java.util.ArrayList;
@@ -99,7 +100,20 @@ public class MainActivity extends AppCompatActivity {
     );
     ArrayList<Constituant> constituants = new ArrayList<>();
 
-    Formula formula = new Formula("Direct compression", "Description", constituants);
+    Step step1 = new Step("MCC-SiO2 product 2%w/w SiO2:\n" +
+            "    • Combination of 6.2 kg of microcrystalline cellulose with 5.2 kg of water in a mix tank to form a slurry containing about 15% solids.\n" +
+            "    • The pH was adjusted to neutral with about 3 ml of ammonium hydroxide. \n" +
+            "    • Mixing the slurry for about 15 minutes then, combined with 2% W/W colloidal silicon dioxide.\n" +
+            "    • The slurry was spray dried.");
+
+    Step step2 = new Step("    • Addition of the coprocessed MCC to the high shear granulator along with the acetaminophen, CDS and SSG.\n" +
+            "    • Mixing the ingredients dry,high shear conditions.");
+    Step step3 = new Step("Addition of sodium stearyl fumarate and mixing was continued.");
+    Step step4 = new Step("Direct compression");
+    Step step5 = new Step("Coating (in option) using EUDRAGIT L100-500 and/or HPMC Opadry colorcon.");
+    ArrayList<Step> steps = new ArrayList<>();
+
+    Formula formula = new Formula("","Direct compression", "Description", constituants, steps);
 
 
     MainAdapter mainAdapter = new MainAdapter(this, medicalClassArrayList);
@@ -110,6 +124,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        steps.add(step1);
+        steps.add(step2);
+        steps.add(step3);
+        steps.add(step4);
+        steps.add(step5);
 
         props1.add("Crystal form: Orthorhombic type II.");
         props1.add("Granular form.");

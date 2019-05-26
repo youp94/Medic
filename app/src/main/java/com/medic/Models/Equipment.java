@@ -1,6 +1,8 @@
 package com.medic.Models;
 
-public class Equipment {
+import java.io.Serializable;
+
+public class Equipment implements Serializable {
 
     private String name;
     private String params;
