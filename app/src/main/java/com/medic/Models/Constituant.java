@@ -7,11 +7,21 @@ public class Constituant implements Serializable {
 
     String name;
     String grade;
-    ArrayList<String> properties;
+    String properties;
     double quantity;
     String ref;
+    String unit;
 
-    public Constituant(String name, String grade, ArrayList<String> properties, double quantity, String ref) {
+    public Constituant(String name, String grade, String properties, double quantity, String ref, String unit) {
+        this.name = name;
+        this.grade = grade;
+        this.properties = properties;
+        this.quantity = quantity;
+        this.ref = ref;
+        this.unit = unit;
+    }
+
+    public Constituant(String name, String grade, String properties, double quantity, String ref) {
         this.name = name;
         this.grade = grade;
         this.properties = properties;
@@ -35,11 +45,11 @@ public class Constituant implements Serializable {
         this.grade = grade;
     }
 
-    public ArrayList<String> getProperties() {
+    public String getProperties() {
         return properties;
     }
 
-    public void setProperties(ArrayList<String> properties) {
+    public void setProperties(String properties) {
         this.properties = properties;
     }
 
@@ -57,5 +67,13 @@ public class Constituant implements Serializable {
 
     public void setRef(String ref) {
         this.ref = ref;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 }

@@ -102,7 +102,7 @@ class ConstituantsAdapter extends BaseAdapter {
         titleText.setText(constituant.getName());
         String grade = "Grade: " + constituant.getGrade();
         gradText.setText(grade);
-        String quantity = "Quantity: " + constituant.getQuantity();
+        String quantity = "Quantity: " + constituant.getQuantity()+" "+constituant.getUnit();
         quanText.setText(quantity);
         refButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,9 +121,14 @@ class ConstituantsAdapter extends BaseAdapter {
         propsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, PropertiesActivity.class);
-                intent.putExtra("props", constituant.getProperties());
-                context.startActivity(intent);
+                new AlertDialog.Builder(context)
+                        .setTitle("Properties")
+                        .setMessage(constituant.getProperties())
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // Continue with delete operation
+                            }
+                        }).show();
             }
         });
 
