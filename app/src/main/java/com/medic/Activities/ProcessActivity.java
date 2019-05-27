@@ -2,8 +2,8 @@ package com.medic.Activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.medic.Models.Process;
 import com.medic.R;
@@ -88,9 +89,13 @@ class ProcessAdapter extends BaseAdapter{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, FormulaActivity.class);
-                intent.putExtra("formula", medic.getFormula());
-                context.startActivity(intent);
+                if (medic.getFormula() != null) {
+                    Intent intent = new Intent(context, FormulaActivity.class);
+                    intent.putExtra("formula", medic.getFormula());
+                    context.startActivity(intent);
+                } else {
+                    Toast.makeText(context, "Page under construction", Toast.LENGTH_LONG).show();
+                }
             }
         });
 

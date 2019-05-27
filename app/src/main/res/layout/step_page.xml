@@ -49,8 +49,9 @@
             <ImageView
                 android:id="@+id/equip_image"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_launcher" />
 
             <TextView
                 android:id="@+id/equip_params"
@@ -59,6 +60,7 @@
                 android:layout_weight="0"
                 android:text="Parameters here"
                 android:textColor="#000"
+                android:layout_margin="25dp"
                 android:textSize="15sp"/>
 
         </LinearLayout>
