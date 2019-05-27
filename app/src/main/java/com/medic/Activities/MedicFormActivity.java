@@ -91,7 +91,7 @@ class MedicFormAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
                 if(medic.getProcessArrayList() != null) {
-                    if (medic.getName() == "Tablet") {
+                    if (medic.getName().equals("Tablet")) {
                         Intent intent = new Intent(context, ProcessActivity.class);
                         intent.putExtra("medicList", medic.getProcessArrayList());
                         context.startActivity(intent);

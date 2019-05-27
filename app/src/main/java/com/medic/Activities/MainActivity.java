@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
     Step step24 = new Step("Sterilizing bottles by therm.");
     ArrayList<Step> steps2 = new ArrayList<>();
 
-    Formula formula2 = new Formula("","Injection", "Description", constituants2, steps2);
+    Formula formula2 = new Formula("","", "Description", constituants2, steps2);
 
     /**********************************************************************************************************************/
 
@@ -398,7 +398,7 @@ public class MainActivity extends AppCompatActivity {
     Step step39 = new Step("The final solution was filled in bottles.");
     ArrayList<Step> steps3 = new ArrayList<>();
 
-    Formula formula3 = new Formula("","Injection", "Description", constituants3, steps3);
+    Formula formula3 = new Formula("","", "Description", constituants3, steps3);
 
     /**********************************************************************************************************************/
 
@@ -410,6 +410,166 @@ public class MainActivity extends AppCompatActivity {
 
     /*************************************** Medicament 2 forms *******************************************************/
     MedicForm medic2Form = new MedicForm("Tablet", "Very long medic form description text");
+
+
+    /********************************************* Medicament 2 form 1 process ********************************/
+
+    Process process21 = new Process("Wet granulation", "Very long process description text");
+    ArrayList<Process> processes21 = new ArrayList<>();
+
+
+    /********************************************** Medicament 2 form 1 process formula *********************************/
+    Constituant constituant211 = new Constituant(
+            "S –(+) – ibuprofen",
+            "In accordance with BP 1988 and BP Add.89.",
+            "    • Crystal form: monoclinic\n" +
+                    "    • Space group: P21/c .\n" +
+                    "    • Density: 1.098 g/cm3.",
+            51,
+            "Günther, Leising. Physical Aspects of Dexibuprofen and\n" +
+                    "Racemic Ibuprofen. Roland Resel, Franz Stelzer, Stefan Tasch, Arthur Lanziner, and Gerhard Hantich. «The Journal of Clinical Pharmacology», January, 1997.",
+            "%"
+    );
+    Constituant constituant212 = new Constituant(
+            "Potato starch",
+            "In accordance with Ph.Eur. , 2nd Ed.",
+            "    • Density (bulk): between 0 .56 and 0.82 g/cm3.\n" +
+                    "    • Density (tapped): between 0 .8 and 0.9 g/cm3.\n" +
+                    "    • Moisture content : 18%.\n" +
+                    "    • Particle average size : 46 µm.",
+            6,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Starch. In Handbook of pharmaceutical excipients, 6e ed. London: The Pharmaceutical Press, 2009, p.685-691.",
+            "%"
+    );
+    Constituant constituant213 = new Constituant(
+            "Lactose",
+            "",
+            "In accordance with Ph.Eur. , 2nd Ed.",
+            6.8,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe. Lactose, Monohydrate. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 364-369.",
+            "%"
+    );
+    Constituant constituant214 = new Constituant(
+            "Microcrystalline cellulose",
+            "AVICEL PH 101",
+            "    • Diluent.\n" +
+                    "    •  Density (Bulk): 0 .32 g/cm3.\n" +
+                    "    • Density (tapped): 0 .45 g/cm3.\n" +
+                    "    • Density (true): between 1.512 and 1.668 g/cm 3.\n" +
+                    "    • Specific surface area: 1.06 – 1.12 m²/g.\n" +
+                    "    • Particule size : 50µm.\n" +
+                    "    • Moisture content ≤5.0%.",
+            6.83,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Cellulose, Microcrystalline. In Handbook of pharmaceutical excipients, 6e ed. London: The Pharmaceutical Press, 2009, p.129-133.",
+            "%"
+    );
+    Constituant constituant215 = new Constituant(
+            "Croscarmellose sodium",
+            "AC-Di-Sol",
+            "    • Desintegrant.\n" +
+                    "    • Density (bulk): 0 .529 g/cm3.\n" +
+                    "    • Density (tapped) : 0 .819 g/cm3.\n" +
+                    "    • Density (true): 1.543 g/cm3.\n" +
+                    "    • Specific surface area: 0.81 – 0.83 m²/g.\n" +
+                    "    • Particle size distribution: no more than 2% retained on a 73.7 µm mesh and no more than 10% retained on a 44.5 µm mesh.",
+            1,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe. Croscarmellose Sodium. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 206-208.",
+            "%"
+    );
+    Constituant constituant216 = new Constituant(
+            "Gelatin",
+            "In accordance with Ph.Eur. , 2nd Ed.",
+            "    • Binder.\n" +
+                    "    • Moisture content : 9-11%.",
+            1,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Gelatin. In Handbook of pharmaceutical excipients, 6e ed. London: The Pharmaceutical Press, 2009, p.278-281.",
+            "%"
+    );
+    Constituant constituant217 = new Constituant(
+            "Microcrystalline cellulose",
+            "AVICEL PH 102",
+            "    • Diluent.\n" +
+                    "    • Density (true): between 1.420 and 1.460 g/cm3.\n" +
+                    "    • Specific surface area: 1.21 – 1.30 m²/g.\n" +
+                    "    • Particule size : 100µm.\n" +
+                    "    • Moisture content ≤5.0%.",
+            25.97,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Cellulose, Microcrystalline. In Handbook of pharmaceutical excipients, 6e ed. London: The Pharmaceutical Press, 2009, p.129-133.\n" +
+                    "Techenical data sheet of: Microcystalline cellulose Avicel PH 102. FMC Corporation. Available on:\n" +
+                    "http://www.signetchem.com/Content/Upload/z99iA7AvicelPH102NFspec.pdf",
+            "%"
+    );
+    Constituant constituant218 = new Constituant(
+            "Croscarmellose sodium",
+            "AC-Di-Sol",
+            "    • Disintegrant.\n" +
+                    "    • Density (bulk): 0 .529 g/cm3.\n" +
+                    "    • Density (tapped) : 0 .819 g/cm3.\n" +
+                    "    • Density (true): 1.543 g/cm3.\n" +
+                    "    • Specific surface area: 0.81 – 0.83 m²/g.\n" +
+                    "    • Particle size distribution: no more than 2% retained on a 73.7 µm mesh and no more than 10% retained on a 44.5 µm mesh.",
+            1,
+            "",
+            "%"
+    );
+    Constituant constituant219 = new Constituant(
+            "Colloidal silica",
+            "AEROSIL 200",
+            "    • Lubricant or glidant.\n" +
+                    "    • Specific surface area: 200 ±25 m2 /g.\n" +
+                    "    • Density (bulk): 0.029- 0.042 g/cm3.\n" +
+                    "    • Density (tapped):0.05 g/cm3.\n" +
+                    "    • Moisture content: ≤1.5%. ",
+            0.085,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe. Colloidal Silicon Dioxide. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 185-188.",
+            "%"
+    );
+    Constituant constituant2110 = new Constituant(
+            "Hydroxypropyl-methylcellulose",
+            "Methocel E5 Premium LV",
+            "    • Density (bulk): 0 .341 g/cm3.\n" +
+                    "    • Density (tapped) : 0 .557 g/cm3.\n" +
+                    "    • Density (true): 1.326 g/cm3.\n" +
+                    "    • Nominal viscosity: 5 mPa.s",
+            5,
+            "Marian E Quinn, Paul J Sheskey Raymond C Rowe. Hypromellose. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 326-329.",
+            "%"
+    );
+    Constituant constituant2111 = new Constituant(
+            "Purified water",
+            "",
+            "n accordance with the Pharmacopea.",
+            95,
+            "",
+            "%"
+    );
+    ArrayList<Constituant> constituants21 = new ArrayList<>();
+
+
+    Step step211 = new Step("Mixture of the constituents of:\n" +
+            "    • S -(+)- ibuprofen\n" +
+            "    • Potato starch\n" +
+            "    • Lactose\n" +
+            "    • 6.83 % w/w Microcrystalline cellulose Avicel PH 101 \n" +
+            "    • 1% w/w Croscarmellose sodium.");
+    Step step212 = new Step("Addition of the aqueous solution of “gelatin” to the mixture.");
+    Step step213 = new Step("Granulation.");
+    Step step214 = new Step("Sieving (sieve aperture size 1.6mm).");
+    Step step215 = new Step("Drying");
+    Step step216 = new Step("Addition of the constituents of:\n" +
+            "    • 25.97% w/w Microcrystalline cellulose Avicel PH 102\n" +
+            "    • 1% w/w Croscarmellose sodium \n" +
+            "    • Colloidal silica.\n" +
+            "With sieved and dried granules.");
+    Step step217 = new Step("Sieving\n" +
+            " (Sieve aperture size 1 mm).");
+    Step step218 = new Step("Compression");
+    Step step219 = new Step("Coating");
+    ArrayList<Step> steps21 = new ArrayList<>();
+
+    Formula formula21 = new Formula("","", "Description", constituants21, steps21);
+
+    /**********************************************************************************************************************/
 
 
     MainAdapter mainAdapter = new MainAdapter(this, medicalClassArrayList);
@@ -497,6 +657,39 @@ public class MainActivity extends AppCompatActivity {
         medicForms.add(medicForm2);
         medicForms.add(medicForm3);
         medic.setMedicFormArrayList(medicForms);
+
+
+
+        /*************************************************  Medic 2 form 1 ***********************************************/
+
+        steps21.add(step211);
+        steps21.add(step212);
+        steps21.add(step213);
+        steps21.add(step214);
+        steps21.add(step215);
+        steps21.add(step216);
+        steps21.add(step217);
+        steps21.add(step218);
+        steps21.add(step219);
+
+        constituants21.add(constituant211);
+        constituants21.add(constituant212);
+        constituants21.add(constituant213);
+        constituants21.add(constituant214);
+        constituants21.add(constituant215);
+        constituants21.add(constituant216);
+        constituants21.add(constituant217);
+        constituants21.add(constituant218);
+        constituants21.add(constituant219);
+        constituants21.add(constituant2110);
+        constituants21.add(constituant2111);
+
+        process21.setFormula(formula21);
+
+        processes21.add(process21);
+        medic2Form.setProcessArrayList(processes21);
+
+
 
         medic2Forms.add(medic2Form);
         medic2.setMedicFormArrayList(medic2Forms);
