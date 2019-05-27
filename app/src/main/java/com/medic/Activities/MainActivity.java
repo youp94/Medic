@@ -2,8 +2,8 @@ package com.medic.Activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<MedicForm> medic2Forms = new ArrayList<>();
 
-    /********************************************* Medicament 1 form 1 process ********************************/
+    /********************************************* Medicament 1 form 1 process 1 ********************************/
 
     Process process = new Process("Direct compression", "Very long process description text");
     ArrayList<Process> processes = new ArrayList<>();
@@ -153,8 +153,7 @@ public class MainActivity extends AppCompatActivity {
     /**********************************************************************************************************************/
 
 
-
-    /********************************************* Medicament 1 form 2 process ********************************/
+    /********************************************* Medicament 1 form 2 process 1 ********************************/
 
     Process process2 = new Process("", "Very long process description text");
     ArrayList<Process> processes2 = new ArrayList<>();
@@ -232,9 +231,7 @@ public class MainActivity extends AppCompatActivity {
     /**********************************************************************************************************************/
 
 
-
-
-    /********************************************* Medicament 1 form 3 process ********************************/
+    /********************************************* Medicament 1 form 3 process 1 ********************************/
 
     Process process3 = new Process("", "Very long process description text");
     ArrayList<Process> processes3 = new ArrayList<>();
@@ -415,6 +412,13 @@ public class MainActivity extends AppCompatActivity {
     /********************************************* Medicament 2 form 1 process ********************************/
 
     Process process21 = new Process("Wet granulation", "Very long process description text");
+
+
+    Process process22 = new Process("Direct compression", "Very long process description text");
+
+    Process process23 = new Process("Dry granulation", "Very long process description text");
+
+    Process process24 = new Process("Others", "Very long process description text");
     ArrayList<Process> processes21 = new ArrayList<>();
 
 
@@ -572,6 +576,365 @@ public class MainActivity extends AppCompatActivity {
     /**********************************************************************************************************************/
 
 
+    /************************************ Medicament 3 *************************************************************/
+
+    Medic medic3 = new Medic("Diclofenac", "Very long medic description text");
+
+    /*************************************** Medicament 3 form 1 *******************************************************/
+    MedicForm medic3Form = new MedicForm("Granul", "Very long medic form description text");
+
+    ArrayList<MedicForm> medic3Forms = new ArrayList<>();
+
+
+    /********************************************* Medicament 3 form 1 process ********************************/
+
+    Process process311 = new Process("Wet granulation", "Very long process description text");
+    ArrayList<Process> processes311 = new ArrayList<>();
+
+
+    /********************************************** Medicament 3 form 1 process formula *********************************/
+    Constituant constituant3111 = new Constituant(
+            "",
+            "",
+            "",
+            51,
+            "",
+            ""
+    );
+    Constituant constituant3112 = new Constituant(
+            "",
+            "",
+            "",
+            6,
+            "",
+            ""
+    );
+    Constituant constituant3113 = new Constituant(
+            "",
+            "",
+            "",
+            6.8,
+            "",
+            ""
+    );
+    Constituant constituant3114 = new Constituant(
+            "",
+            "",
+            "",
+            6.83,
+            "",
+            ""
+    );
+    Constituant constituant3115 = new Constituant(
+            "",
+            "",
+            "",
+            1,
+            "",
+            ""
+    );
+    Constituant constituant3116 = new Constituant(
+            "",
+            "",
+            "",
+            1,
+            "",
+            "%"
+    );
+    Constituant constituant3117 = new Constituant(
+            "",
+            "",
+            "",
+            25.97,
+            "",
+            ""
+    );
+    Constituant constituant3118 = new Constituant(
+            "",
+            "",
+            "",
+            1,
+            "",
+            ""
+    );
+    Constituant constituant3119 = new Constituant(
+            "",
+            "",
+            "",
+            0.085,
+            "",
+            ""
+    );
+    Constituant constituant31110 = new Constituant(
+            "",
+            "",
+            "",
+            5,
+            "",
+            "%"
+    );
+    Constituant constituant31111 = new Constituant(
+            "",
+            "",
+            "",
+            95,
+            "",
+            "%"
+    );
+    ArrayList<Constituant> constituants311 = new ArrayList<>();
+
+
+    Step step3111 = new Step("");
+    Step step3112 = new Step("");
+    Step step3113 = new Step("");
+    Step step3114 = new Step("");
+    Step step3115 = new Step("");
+    Step step3116 = new Step("");
+    Step step3117 = new Step("");
+    Step step3118 = new Step("");
+    Step step3119 = new Step("");
+    ArrayList<Step> steps311 = new ArrayList<>();
+
+    Formula formula311 = new Formula("", "", "Description", constituants311, steps311);
+
+    /**********************************************************************************************************************/
+
+
+    /*************************************** Medicament 3 form 2 *******************************************************/
+    MedicForm medic3Form2 = new MedicForm("Powder", "Very long medic form description text");
+
+
+    /********************************************* Medicament 3 form 2 process ********************************/
+
+    Process process321 = new Process("", "Very long process description text");
+    ArrayList<Process> processes321 = new ArrayList<>();
+
+
+    /********************************************** Medicament 3 form 1 process formula *********************************/
+    Constituant constituant3211 = new Constituant(
+            "",
+            "",
+            "",
+            51,
+            "",
+            ""
+    );
+    Constituant constituant3212 = new Constituant(
+            "",
+            "",
+            "",
+            6,
+            "",
+            ""
+    );
+    Constituant constituant3213 = new Constituant(
+            "",
+            "",
+            "",
+            6.8,
+            "",
+            ""
+    );
+    Constituant constituant3214 = new Constituant(
+            "",
+            "",
+            "",
+            6.83,
+            "",
+            ""
+    );
+    Constituant constituant3215 = new Constituant(
+            "",
+            "",
+            "",
+            1,
+            "",
+            ""
+    );
+    Constituant constituant3216 = new Constituant(
+            "",
+            "",
+            "",
+            1,
+            "",
+            "%"
+    );
+    Constituant constituant3217 = new Constituant(
+            "",
+            "",
+            "",
+            25.97,
+            "",
+            ""
+    );
+    Constituant constituant3218 = new Constituant(
+            "",
+            "",
+            "",
+            1,
+            "",
+            ""
+    );
+    Constituant constituant3219 = new Constituant(
+            "",
+            "",
+            "",
+            0.085,
+            "",
+            ""
+    );
+    Constituant constituant32110 = new Constituant(
+            "",
+            "",
+            "",
+            5,
+            "",
+            "%"
+    );
+    Constituant constituant32111 = new Constituant(
+            "",
+            "",
+            "",
+            95,
+            "",
+            "%"
+    );
+    ArrayList<Constituant> constituants321 = new ArrayList<>();
+
+
+    Step step3211 = new Step("");
+    Step step3212 = new Step("");
+    Step step3213 = new Step("");
+    Step step3214 = new Step("");
+    Step step3215 = new Step("");
+    Step step3216 = new Step("");
+    Step step3217 = new Step("");
+    Step step3218 = new Step("");
+    Step step3219 = new Step("");
+    ArrayList<Step> steps321 = new ArrayList<>();
+
+    Formula formula321 = new Formula("", "", "Description", constituants321, steps321);
+
+    /**********************************************************************************************************************/
+
+    /*************************************** Medicament 3 form 2 *******************************************************/
+    MedicForm medic3Form3 = new MedicForm("Solution", "Very long medic form description text");
+
+
+    /********************************************* Medicament 3 form 2 process ********************************/
+
+    Process process331 = new Process("", "Very long process description text");
+    ArrayList<Process> processes331 = new ArrayList<>();
+
+
+    /********************************************** Medicament 3 form 1 process formula *********************************/
+    Constituant constituant3311 = new Constituant(
+            "",
+            "",
+            "",
+            51,
+            "",
+            ""
+    );
+    Constituant constituant3312 = new Constituant(
+            "",
+            "",
+            "",
+            6,
+            "",
+            ""
+    );
+    Constituant constituant3313 = new Constituant(
+            "",
+            "",
+            "",
+            6.8,
+            "",
+            ""
+    );
+    Constituant constituant3314 = new Constituant(
+            "",
+            "",
+            "",
+            6.83,
+            "",
+            ""
+    );
+    Constituant constituant3315 = new Constituant(
+            "",
+            "",
+            "",
+            1,
+            "",
+            ""
+    );
+    Constituant constituant3316 = new Constituant(
+            "",
+            "",
+            "",
+            1,
+            "",
+            "%"
+    );
+    Constituant constituant3317 = new Constituant(
+            "",
+            "",
+            "",
+            25.97,
+            "",
+            ""
+    );
+    Constituant constituant3318 = new Constituant(
+            "",
+            "",
+            "",
+            1,
+            "",
+            ""
+    );
+    Constituant constituant3319 = new Constituant(
+            "",
+            "",
+            "",
+            0.085,
+            "",
+            ""
+    );
+    Constituant constituant33110 = new Constituant(
+            "",
+            "",
+            "",
+            5,
+            "",
+            "%"
+    );
+    Constituant constituant33111 = new Constituant(
+            "",
+            "",
+            "",
+            95,
+            "",
+            "%"
+    );
+    ArrayList<Constituant> constituants331 = new ArrayList<>();
+
+
+    Step step3311 = new Step("");
+    Step step3312 = new Step("");
+    Step step3313 = new Step("");
+    Step step3314 = new Step("");
+    Step step3315 = new Step("");
+    Step step3316 = new Step("");
+    Step step3317 = new Step("");
+    Step step3318 = new Step("");
+    Step step3319 = new Step("");
+    ArrayList<Step> steps331 = new ArrayList<>();
+
+    Formula formula331 = new Formula("", "", "Description", constituants331, steps331);
+
+    /**********************************************************************************************************************/
+
+
     MainAdapter mainAdapter = new MainAdapter(this, medicalClassArrayList);
 
     ListView listView = null;
@@ -687,8 +1050,109 @@ public class MainActivity extends AppCompatActivity {
         process21.setFormula(formula21);
 
         processes21.add(process21);
+        processes21.add(process22);
+        processes21.add(process23);
+        processes21.add(process24);
         medic2Form.setProcessArrayList(processes21);
 
+
+        /**************************************************** Medic 3 form 1 ************************************************************/
+
+
+        steps311.add(step3111);
+        steps311.add(step3112);
+        steps311.add(step3113);
+        steps311.add(step3114);
+        steps311.add(step3115);
+        steps311.add(step3116);
+        steps311.add(step3117);
+        steps311.add(step3118);
+        steps311.add(step3119);
+
+        constituants311.add(constituant3111);
+        constituants311.add(constituant3111);
+        constituants311.add(constituant3111);
+        constituants311.add(constituant3111);
+        constituants311.add(constituant3111);
+        constituants311.add(constituant3111);
+        constituants311.add(constituant3111);
+        constituants311.add(constituant3111);
+        constituants311.add(constituant3111);
+        constituants311.add(constituant3111);
+        constituants311.add(constituant3111);
+
+        process311.setFormula(formula311);
+
+        processes311.add(process311);
+        medic3Form.setProcessArrayList(processes311);
+
+
+        /**************************************************** Medic 3 form 2 ****************************************************************/
+
+
+        steps321.add(step3211);
+        steps321.add(step3212);
+        steps321.add(step3213);
+        steps321.add(step3214);
+        steps321.add(step3215);
+        steps321.add(step3216);
+        steps321.add(step3217);
+        steps321.add(step3218);
+        steps321.add(step3219);
+
+        constituants321.add(constituant3211);
+        constituants321.add(constituant3211);
+        constituants321.add(constituant3211);
+        constituants321.add(constituant3211);
+        constituants321.add(constituant3211);
+        constituants321.add(constituant3211);
+        constituants321.add(constituant3211);
+        constituants321.add(constituant3211);
+        constituants321.add(constituant3211);
+        constituants321.add(constituant3211);
+        constituants321.add(constituant3211);
+
+        process321.setFormula(formula321);
+
+        processes321.add(process321);
+        medic3Form2.setProcessArrayList(processes321);
+
+
+        /*************************************************** Medic 3 form 3 ****************************************************************/
+
+
+        steps331.add(step3311);
+        steps331.add(step3312);
+        steps331.add(step3313);
+        steps331.add(step3314);
+        steps331.add(step3315);
+        steps331.add(step3316);
+        steps331.add(step3317);
+        steps331.add(step3318);
+        steps331.add(step3319);
+
+        constituants331.add(constituant3311);
+        constituants331.add(constituant3311);
+        constituants331.add(constituant3311);
+        constituants331.add(constituant3311);
+        constituants331.add(constituant3311);
+        constituants331.add(constituant3311);
+        constituants331.add(constituant3311);
+        constituants331.add(constituant3311);
+        constituants331.add(constituant3311);
+        constituants331.add(constituant3311);
+        constituants331.add(constituant3311);
+
+        process331.setFormula(formula331);
+
+        processes331.add(process331);
+        medic3Form3.setProcessArrayList(processes331);
+
+
+        medic3Forms.add(medic3Form);
+        medic3Forms.add(medic3Form2);
+        medic3Forms.add(medic3Form3);
+        medic3.setMedicFormArrayList(medic3Forms);
 
 
         medic2Forms.add(medic2Form);
@@ -696,6 +1160,7 @@ public class MainActivity extends AppCompatActivity {
 
         medics.add(medic);
         medics.add(medic2);
+        medics.add(medic3);
         medicalClass1.setMedicArrayList(medics);
 
         medicalClassArrayList.add(medicalClass1);
