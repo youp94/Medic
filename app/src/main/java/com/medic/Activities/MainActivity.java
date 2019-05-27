@@ -594,105 +594,138 @@ public class MainActivity extends AppCompatActivity {
 
     /********************************************** Medicament 3 form 1 process formula *********************************/
     Constituant constituant3111 = new Constituant(
+            "Diclofenac",
             "",
-            "",
-            "",
-            51,
-            "",
-            ""
+            "    • Diclofenac potassium.\n" +
+                    "    • Average particle size : 170-220µm.\n" +
+                    "    • Solubility: Sparingly soluble in water, soluble in ethanol (96 per cent).",
+            5.556,
+            "ARSHAD S and al.FORMULATION AND EVALUATION OF GASTRO RETENTIVE NONEFFERVACENTFLOATING TABLET OF DICLOFENAC POTASSIUM, «International Journalof biology, Pharmacy and Allied Sciences», November 2016, vol. 5, No. 11, p. 2967- 2985.\n" +
+                    "\n" +
+                    "\n" +
+                    "Yong K. Han and al. Physicochemical Characterization of Physical Mixture and Solid Dispersion of Diclofenac Potassium with Mannitol, « Journal of Applied Pharmaceutical Science », January 2017, \n" +
+                    " Vol. 7, No. 1, p. 204-208.  ",
+            "%"
     );
     Constituant constituant3112 = new Constituant(
+            "Glycerol dibehenate",
             "",
-            "",
-            "",
-            6,
-            "",
-            ""
+            "    • Lubricant.\n" +
+                    "    • Storage temperature : <35°C.\n" +
+                    "    • HLB : 2.",
+            0.222,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Glyceryl Behenate. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 286-288.",
+            "%"
     );
     Constituant constituant3113 = new Constituant(
+            "Saccharin sodium",
             "",
-            "",
-            "",
-            6.8,
-            "",
-            ""
+            "    • Sweetening agent, flavoring enhancer.\n" +
+                    "    • PH: 6.6 for a 10% w/v aqueous solution.\n" +
+                    "    • Density (bulk): 0.68 g/Cm3 (84% saccharin sodium).\n" +
+                    "    • Density (particle): 1.7 g/Cm3 (84% saccharin sodium).\n" +
+                    "    • Density (tapped):  0.96 g/Cm3 (84% saccharin sodium).\n" +
+                    "    • Moisture content:  contains 5.5% water (84% saccharin sodium).\n" +
+                    "    • Specific surface area: 0.25m2/g.\n" +
+                    "    • Solubility in water: 10g/100ml.",
+            0.556,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Saccharin Sodium. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 608-610.",
+            "%"
     );
     Constituant constituant3114 = new Constituant(
+            "Anise flavor",
             "",
+            "    • Flavoring agent.\n" +
+                    "\n",
+            1.667,
             "",
-            "",
-            6.83,
-            "",
-            ""
+            "%"
     );
     Constituant constituant3115 = new Constituant(
+            "Potassium hydrogen carbonate",
             "",
-            "",
-            "",
-            1,
-            "",
-            ""
+            "    • Buffering agent.\n" +
+                    "    • Soluble in water.\n" +
+                    "    • PH: 8.2 for a 0.1M aqueous solution.",
+            2.444,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Sodium Chloride. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 637-640.",
+            "%"
     );
     Constituant constituant3116 = new Constituant(
+            "Mint flavor",
             "",
-            "",
-            "",
-            1,
+            "    • Flavoring agent.\n    • Flavoring agent.\n",
+            3.889,
             "",
             "%"
     );
     Constituant constituant3117 = new Constituant(
+            "Aspartame",
             "",
-            "",
-            "",
-            25.97,
-            "",
-            ""
-    );
-    Constituant constituant3118 = new Constituant(
-            "",
-            "",
-            "",
-            1,
-            "",
-            ""
-    );
-    Constituant constituant3119 = new Constituant(
-            "",
-            "",
-            "",
-            0.085,
-            "",
-            ""
-    );
-    Constituant constituant31110 = new Constituant(
-            "",
-            "",
-            "",
-            5,
-            "",
+            "    • Sweetening agent, flavoring enhancer.\n" +
+                    "    • Flowability:44%\n" +
+                    "    • Density (true): 1.347 g/cm3.",
+            5.558,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Aspartame. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 48-50.",
             "%"
     );
-    Constituant constituant31111 = new Constituant(
+    Constituant constituant3118 = new Constituant(
+            "Mannitol",
+            "fine quality",
+            "    • Diluent.\n" +
+                    "    • Density(bulk) : 0.43 g/cm3.\n" +
+                    "    • Density(tapped) : 0.734 g/cm3.\n" +
+                    "    • Density( true) : 1.514 g/cm3.\n" +
+                    "    • Specific surface area : 0.37-0.39 m2/g. ",
+            8.111,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Mannitol. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 424-428.",
+            "%"
+    );
+    Constituant constituant3119 = new Constituant(
+            "Mannitol",
+            "coarse quality",
+            "    • Diluent.\n" +
+                    "    • Density (bulk) : 0.7g/cm3.\n" +
+                    "    • Density (tapped) : 0.8 g/cm3.\n" +
+                    "    • Density( true) : 1.514 g/cm3.\n" +
+                    "    • Specific surface area : 0.37-0.39 m2/g.",
+            72.022,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Mannitol. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 424-428.",
+            "%"
+    );
+    Constituant constituant31110 = new Constituant(
+            "Ethyl alcohol",
             "",
-            "",
-            "",
-            95,
+            "    • Solubilizing and preservative agent.\n" +
+                    "    • Density: 0.7893 g/cm3.\n" +
+                    "    • Viscosity : 1.2 mPa.\n" +
+                    "    • Solubilty in water: miscible.\n" +
+                    "    • molecular diameter: 0.469nm ",
+            1.916,
             "",
             "%"
     );
     ArrayList<Constituant> constituants311 = new ArrayList<>();
 
 
-    Step step3111 = new Step("");
-    Step step3112 = new Step("");
-    Step step3113 = new Step("");
-    Step step3114 = new Step("");
-    Step step3115 = new Step("");
-    Step step3116 = new Step("");
-    Step step3117 = new Step("");
-    Step step3118 = new Step("");
-    Step step3119 = new Step("");
+    Step step3111 = new Step("Mixture of:\n" +
+            "    • 16.2kg of mannitol(coarse quality),11.25 kg of diclofenac,4.95 of potassium hydrogen  biacarbonte, 1.125 of saccharin sodium and 11.25 of aspartame.");
+    Step step3112 = new Step("     • Addition of the ethyl alcohol.");
+    Step step3113 = new Step("Sieve the following excipients: \n" +
+            "    • 129.475 kg of mannitol (coarse quality).\n" +
+            "    • 16.425kg of mannitol(fine quality).\n" +
+            "    • 0.45kg of Glycerol dibehenate.\n" +
+            "    • 7.875kg of mint flavors.\n" +
+            "    • 3.375kg of anise flavor. ");
+    Step step3114 = new Step("Mixture of:\n" +
+            "    • Granulate obtained in step1.\n" +
+            "    • 129.475 kg of mannitol (coarse quality).\n" +
+            "    • 16.425kg of mannitol(fine quality).\n" +
+            "    • 0.45kg of Glycerol dibehenate.\n" +
+            "    • 7.875kg of mint flavors.\n" +
+            "    • 3.375kg of anise flavor.\n" +
+            "NB: The addition of the excipients was in order.");
+    Step step3115 = new Step("Fill the final mixture into sachets.");
     ArrayList<Step> steps311 = new ArrayList<>();
 
     Formula formula311 = new Formula("", "", "Description", constituants311, steps311);
@@ -710,224 +743,245 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Process> processes321 = new ArrayList<>();
 
 
-    /********************************************** Medicament 3 form 1 process formula *********************************/
+    /********************************************** Medicament 3 form 2 process formula *********************************/
     Constituant constituant3211 = new Constituant(
+            "Diclofenac",
             "",
-            "",
-            "",
-            51,
-            "",
-            ""
+            "    • Diclofenac potassium.\n" +
+                    "    • Average particle size : 170-220µm.\n" +
+                    "    • Solubility: Sparingly soluble in water, soluble in ethanol (96 per cent).",
+            33.15,
+            "ARSHAD S and al.FORMULATION AND EVALUATION OF GASTRO RETENTIVE NONEFFERVACENTFLOATING TABLET OF DICLOFENAC POTASSIUM, «International Journalof biology, Pharmacy and Allied Sciences», November 2016, vol. 5, No. 11, p. 2967- 2985.\n" +
+                    "\n" +
+                    "\n" +
+                    "Yong K. Han and al. Physicochemical Characterization of Physical Mixture and Solid Dispersion of Diclofenac Potassium with Mannitol, « Journal of Applied Pharmaceutical Science », January 2017, \n" +
+                    " Vol. 7, No. 1, p. 204-208.  ",
+            "kg"
     );
     Constituant constituant3212 = new Constituant(
+            "Glycerol dibehenate",
             "",
-            "",
-            "",
-            6,
-            "",
-            ""
+            "    • Lubricant.\n" +
+                    "    • Storage temperature : <35°C.\n" +
+                    "    • HLB : 2.",
+            2.6,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Glyceryl Behenate. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 286-288.",
+            "kg"
     );
     Constituant constituant3213 = new Constituant(
+            "Saccharin sodium",
             "",
-            "",
-            "",
-            6.8,
-            "",
-            ""
+            "    • Sweetening agent, flavoring enhancer.\n" +
+                    "    • PH: 6.6 for a 10% w/v aqueous solution.\n" +
+                    "    • Density (bulk): 0.68 g/Cm3 (84% saccharin sodium).\n" +
+                    "    • Density (particle): 1.7 g/Cm3 (84% saccharin sodium).\n" +
+                    "    • Density (tapped):  0.96 g/Cm3 (84% saccharin sodium).\n" +
+                    "    • Moisture content:  contains 5.5% water (84% saccharin sodium).\n" +
+                    "    • Specific surface area: 0.25m2/g.\n" +
+                    "    • Solubility in water: 10g/100ml.",
+            6.5,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Saccharin Sodium. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 608-610.",
+            "kg"
     );
     Constituant constituant3214 = new Constituant(
+            "Anise flavor",
             "",
+            "    • Flavoring agent.\n" +
+                    "\n",
+            19.5,
             "",
-            "",
-            6.83,
-            "",
-            ""
+            "kg"
     );
     Constituant constituant3215 = new Constituant(
+            "Potassium hydrogen carbonate",
             "",
-            "",
-            "",
-            1,
-            "",
-            ""
+            "    • Buffering agent.\n" +
+                    "    • Soluble in water.\n" +
+                    "    • PH: 8.2 for a 0.1M aqueous solution.",
+            28.6,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Sodium Chloride. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 637-640.",
+            "kg"
     );
     Constituant constituant3216 = new Constituant(
+            "Mint flavor",
             "",
+            "    • Flavoring agent.",
+            45.5,
             "",
-            "",
-            1,
-            "",
-            "%"
+            "kg"
     );
     Constituant constituant3217 = new Constituant(
+            "Aspartame",
             "",
-            "",
-            "",
-            25.97,
-            "",
-            ""
+            "    • Sweetening agent, flavoring enhancer.\n" +
+                    "    • Flowability:44%\n" +
+                    "    • Density (true): 1.347 g/cm3.",
+            65,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Aspartame. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 48-50.",
+            "kg"
     );
     Constituant constituant3218 = new Constituant(
-            "",
-            "",
-            "",
-            1,
-            "",
-            ""
+            "Mannitol",
+            "Fine quality",
+            "    • Diluent.\n" +
+                    "    • Density(bulk) : 0.43 g/cm3.\n" +
+                    "    • Density(tapped) : 0.734 g/cm3.\n" +
+                    "    • Density( true) : 1.514 g/cm3.\n" +
+                    "    • Specific surface area : 0.37-0.39 m2/g. ",
+            47.45,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Mannitol. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 424-428.",
+            "kg"
     );
     Constituant constituant3219 = new Constituant(
-            "",
-            "",
-            "",
-            0.085,
-            "",
-            ""
-    );
-    Constituant constituant32110 = new Constituant(
-            "",
-            "",
-            "",
-            5,
-            "",
-            "%"
-    );
-    Constituant constituant32111 = new Constituant(
-            "",
-            "",
-            "",
-            95,
-            "",
-            "%"
+            "Mannitol",
+            "Coarse quality",
+            "    • Diluent.\n" +
+                    "    • Density (bulk) : 0.7g/cm3.\n" +
+                    "    • Density (tapped) : 0.8 g/cm3.\n" +
+                    "    • Density( true) : 1.514 g/cm3.\n" +
+                    "    • Specific surface area : 0.37-0.39 m2/g.",
+            842.4,
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Mannitol. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 424-428.",
+            "kg"
     );
     ArrayList<Constituant> constituants321 = new ArrayList<>();
 
 
-    Step step3211 = new Step("");
-    Step step3212 = new Step("");
-    Step step3213 = new Step("");
-    Step step3214 = new Step("");
-    Step step3215 = new Step("");
-    Step step3216 = new Step("");
-    Step step3217 = new Step("");
-    Step step3218 = new Step("");
-    Step step3219 = new Step("");
+    Step step3211 = new Step("Sieving 47.45 kg of mannitol (fine quality) and 33.15Kg of Diclofenac potassium.");
+    Step step3212 = new Step("Mixing the mannitol (fine quality) with Diclofenac.");
+    Step step3213 = new Step("Sieving the excipients: \n" +
+            "    • 520Kg mannitol(coarse quality).\n" +
+            "    • 28.6Kg of potassium hydrogen carbonate.\n" +
+            "    • 65Kg of Aspartame.\n" +
+            "    • 6.5Kg of saccharin sodium.");
+    Step step3214 = new Step("Mixture of:\n" +
+            "    • 120Kg of mannitol(croase quality).\n" +
+            "    • The mixture obtained from step 1.\n" +
+            "    • 100Kg of mannitol(croase quality).\n" +
+            "    • 28.6Kg of potassium hydrogen carbonate.\n" +
+            "    • 100Kg of mannitol(croase quality).\n" +
+            "    • 65Kg of Aspartame.\n" +
+            "    • 100Kg of mannitol(croase quality).\n" +
+            "    • 6.5Kg of saccharin sodium.\n" +
+            "    • 100Kg of mannitol(croase quality).\n" +
+            "NB: The addition of the excipients was in order.");
+    Step step3215 = new Step("Sieving the excipients:\n" +
+            "    • 322.4kg of mannitol(croase quality).\n" +
+            "    • 2.6Kg of glyceryl       dibehenate.\n" +
+            "    • 45.5Kg of mint flavor.\n" +
+            "    • 19.5Kg of anise flavor.");
+    Step step3216 = new Step("Mixing the excipients:\n" +
+            "    • 72.4Kg mannitol(croase quality).\n" +
+            "    • 52.6Kg og glidant pre-mexture consisting of:\n" +
+            "    A. 2.6Kg of glyceryl       dibehenate.\n" +
+            "    B. 50Kg of mannitol (croase quality).\n" +
+            "    • 45.5Kg of mint flavor.\n" +
+            "    • 100Kg of mannitol (croase quality).\n" +
+            "    • 19.5Kg of anise flavor.\n" +
+            "    • 100Kg of mannitol (croase quality).\n" +
+            "NB: The addition of the excipients was in order.");
+    Step step3217 = new Step("Filling the final mixture into sachets.");
     ArrayList<Step> steps321 = new ArrayList<>();
 
     Formula formula321 = new Formula("", "", "Description", constituants321, steps321);
 
     /**********************************************************************************************************************/
 
-    /*************************************** Medicament 3 form 2 *******************************************************/
+    /*************************************** Medicament 3 form 3 *******************************************************/
     MedicForm medic3Form3 = new MedicForm("Solution", "Very long medic form description text");
 
 
-    /********************************************* Medicament 3 form 2 process ********************************/
+    /********************************************* Medicament 3 form 3 process ********************************/
 
     Process process331 = new Process("", "Very long process description text");
     ArrayList<Process> processes331 = new ArrayList<>();
 
 
-    /********************************************** Medicament 3 form 1 process formula *********************************/
+    /********************************************** Medicament 3 form 3 process formula *********************************/
     Constituant constituant3311 = new Constituant(
+            "Diclofenac potassium",
             "",
+            "    • Diclofenac potassium.\n" +
+                    "    • Average particle size : 170-220µm.\n" +
+                    "    • Solubility: Sparingly soluble in water, soluble in ethanol (96 per cent).",
+            13.5,
             "",
-            "",
-            51,
-            "",
-            ""
+            "kg"
     );
     Constituant constituant3312 = new Constituant(
+            "Ethyl alcohol",
+            "96%",
+            "    • Solubilizing and preservative agent.\n" +
+                    "    • Density: 0.7893 g/cm3.\n" +
+                    "    • Viscosity : 1.2 mPa.\n" +
+                    "    • Solubilty in water: miscible.\n" +
+                    "    • molecular diameter: 0.469nm",
+            75,
             "",
-            "",
-            "",
-            6,
-            "",
-            ""
+            "kg"
     );
     Constituant constituant3313 = new Constituant(
+            "Glycerol",
             "",
+            "    • Solubilizing agent.\n" +
+                    "    • Density: 1.2656 g/cm3 at 15°C.\n" +
+                    "                1.2636 g/cm3 at 20°C.\n" +
+                    "                               1.2620g/cm3 at 25°C.\n" +
+                    "    • Surface tension: 63.4 mN/m",
+            50,
             "",
-            "",
-            6.8,
-            "",
-            ""
+            "kg"
     );
     Constituant constituant3314 = new Constituant(
+            "Potassium hydrogen carbonate",
             "",
+            "    • Buffering agent.\n" +
+                    "    • Soluble in water.\n" +
+                    "    • PH: 8.2 for a 0.1M aqueous solution.",
+            6.25,
             "",
-            "",
-            6.83,
-            "",
-            ""
+            "kg"
     );
     Constituant constituant3315 = new Constituant(
+            "Saccharin sodium",
             "",
+            "    • PH: 6.6 for a 10% w/v aqueous solution.\n" +
+                    "    • Density (bulk): 0.68 g/Cm3 (84% saccharin sodium).\n" +
+                    "    • Density (particle): 1.7 g/Cm3 (84% saccharin sodium).\n" +
+                    "    • Density (tapped):  0.96 g/Cm3 (84% saccharin sodium).\n" +
+                    "    • Moisture content:  contains 5.5% water (84% saccharin sodium).\n" +
+                    "    • Specific surface area: 0.25m2/g.\n" +
+                    "    • Solubility in water: 10g/100ml.",
+            3.75,
             "",
-            "",
-            1,
-            "",
-            ""
+            "kg"
     );
     Constituant constituant3316 = new Constituant(
+            "Caramel E150a",
             "",
-            "",
-            "",
-            1,
-            "",
-            "%"
+            "    • Colouring agent.",
+            0.625,
+            "E150a",
+            "kg"
     );
     Constituant constituant3317 = new Constituant(
+            "Purfied water",
             "",
+            "    • Diluent agent.",
+            107.25,
             "",
-            "",
-            25.97,
-            "",
-            ""
-    );
-    Constituant constituant3318 = new Constituant(
-            "",
-            "",
-            "",
-            1,
-            "",
-            ""
-    );
-    Constituant constituant3319 = new Constituant(
-            "",
-            "",
-            "",
-            0.085,
-            "",
-            ""
-    );
-    Constituant constituant33110 = new Constituant(
-            "",
-            "",
-            "",
-            5,
-            "",
-            "%"
-    );
-    Constituant constituant33111 = new Constituant(
-            "",
-            "",
-            "",
-            95,
-            "",
-            "%"
+            "kg"
     );
     ArrayList<Constituant> constituants331 = new ArrayList<>();
 
 
-    Step step3311 = new Step("");
-    Step step3312 = new Step("");
-    Step step3313 = new Step("");
-    Step step3314 = new Step("");
-    Step step3315 = new Step("");
-    Step step3316 = new Step("");
-    Step step3317 = new Step("");
-    Step step3318 = new Step("");
-    Step step3319 = new Step("");
+    Step step3311 = new Step("Adding the ethyl alcohol 96%   into a vessel and then, under stirring adding the active ingredient.");
+    Step step3312 = new Step("After stirring, adding the glycerol into a vessel.");
+    Step step3313 = new Step("While stirring, adding 76Kg of purified water to the mixture and stirred until a complete clear solution is obtained.");
+    Step step3314 = new Step("The 31.25Kg of purified water into separate mixing vessel and under stirring, adding the remaining excipients (Potassium, Saccharin,Caramel E150a). The mixture is stirred.");
+    Step step3315 = new Step("While stirring, adding the mixture obtained from step 1 to the mixture obtained from step 2 and the resultant mixture stirred until a complete clear brown solution is obtained.");
+    Step step3316 = new Step("Under mixing, the volume was made up with purified water (250 liters of solution).");
+    Step step3317 = new Step("The solution is particle-free filtrated.");
     ArrayList<Step> steps331 = new ArrayList<>();
 
     Formula formula331 = new Formula("", "", "Description", constituants331, steps331);
@@ -1064,22 +1118,17 @@ public class MainActivity extends AppCompatActivity {
         steps311.add(step3113);
         steps311.add(step3114);
         steps311.add(step3115);
-        steps311.add(step3116);
-        steps311.add(step3117);
-        steps311.add(step3118);
-        steps311.add(step3119);
 
         constituants311.add(constituant3111);
-        constituants311.add(constituant3111);
-        constituants311.add(constituant3111);
-        constituants311.add(constituant3111);
-        constituants311.add(constituant3111);
-        constituants311.add(constituant3111);
-        constituants311.add(constituant3111);
-        constituants311.add(constituant3111);
-        constituants311.add(constituant3111);
-        constituants311.add(constituant3111);
-        constituants311.add(constituant3111);
+        constituants311.add(constituant3112);
+        constituants311.add(constituant3113);
+        constituants311.add(constituant3114);
+        constituants311.add(constituant3115);
+        constituants311.add(constituant3116);
+        constituants311.add(constituant3117);
+        constituants311.add(constituant3118);
+        constituants311.add(constituant3119);
+        constituants311.add(constituant31110);
 
         process311.setFormula(formula311);
 
@@ -1097,20 +1146,16 @@ public class MainActivity extends AppCompatActivity {
         steps321.add(step3215);
         steps321.add(step3216);
         steps321.add(step3217);
-        steps321.add(step3218);
-        steps321.add(step3219);
 
         constituants321.add(constituant3211);
-        constituants321.add(constituant3211);
-        constituants321.add(constituant3211);
-        constituants321.add(constituant3211);
-        constituants321.add(constituant3211);
-        constituants321.add(constituant3211);
-        constituants321.add(constituant3211);
-        constituants321.add(constituant3211);
-        constituants321.add(constituant3211);
-        constituants321.add(constituant3211);
-        constituants321.add(constituant3211);
+        constituants321.add(constituant3212);
+        constituants321.add(constituant3213);
+        constituants321.add(constituant3214);
+        constituants321.add(constituant3215);
+        constituants321.add(constituant3216);
+        constituants321.add(constituant3217);
+        constituants321.add(constituant3218);
+        constituants321.add(constituant3219);
 
         process321.setFormula(formula321);
 
@@ -1128,20 +1173,14 @@ public class MainActivity extends AppCompatActivity {
         steps331.add(step3315);
         steps331.add(step3316);
         steps331.add(step3317);
-        steps331.add(step3318);
-        steps331.add(step3319);
 
         constituants331.add(constituant3311);
-        constituants331.add(constituant3311);
-        constituants331.add(constituant3311);
-        constituants331.add(constituant3311);
-        constituants331.add(constituant3311);
-        constituants331.add(constituant3311);
-        constituants331.add(constituant3311);
-        constituants331.add(constituant3311);
-        constituants331.add(constituant3311);
-        constituants331.add(constituant3311);
-        constituants331.add(constituant3311);
+        constituants331.add(constituant3312);
+        constituants331.add(constituant3313);
+        constituants331.add(constituant3314);
+        constituants331.add(constituant3315);
+        constituants331.add(constituant3316);
+        constituants331.add(constituant3317);
 
         process331.setFormula(formula331);
 
