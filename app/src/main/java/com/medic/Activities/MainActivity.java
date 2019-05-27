@@ -905,7 +905,11 @@ public class MainActivity extends AppCompatActivity {
                     "    • Average particle size : 170-220µm.\n" +
                     "    • Solubility: Sparingly soluble in water, soluble in ethanol (96 per cent).",
             13.5,
-            "",
+            "ARSHAD S and al.FORMULATION AND EVALUATION OF GASTRO RETENTIVE NONEFFERVACENTFLOATING TABLET OF DICLOFENAC POTASSIUM, «International Journalof biology, Pharmacy and Allied Sciences», November 2016, vol. 5, No. 11, p. 2967- 2985.\n" +
+                    "\n" +
+                    "\n" +
+                    "Yong K. Han and al. Physicochemical Characterization of Physical Mixture and Solid Dispersion of Diclofenac Potassium with Mannitol, « Journal of Applied Pharmaceutical Science », January 2017, \n" +
+                    " Vol. 7, No. 1, p. 204-208.  ",
             "kg"
     );
     Constituant constituant3312 = new Constituant(
@@ -917,7 +921,9 @@ public class MainActivity extends AppCompatActivity {
                     "    • Solubilty in water: miscible.\n" +
                     "    • molecular diameter: 0.469nm",
             75,
-            "",
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Alcohol. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 17-19.\n" +
+                    "\n" +
+                    "Leroy G.Wade, 2019. Alcohol. In: Britannica Encyclopedia [En ligne]. Available on : https://www.britannica.com/science/alcohol/Reactions-of-alcohols",
             "kg"
     );
     Constituant constituant3313 = new Constituant(
@@ -929,7 +935,7 @@ public class MainActivity extends AppCompatActivity {
                     "                               1.2620g/cm3 at 25°C.\n" +
                     "    • Surface tension: 63.4 mN/m",
             50,
-            "",
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Glycerin. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 283-286.",
             "kg"
     );
     Constituant constituant3314 = new Constituant(
@@ -939,7 +945,7 @@ public class MainActivity extends AppCompatActivity {
                     "    • Soluble in water.\n" +
                     "    • PH: 8.2 for a 0.1M aqueous solution.",
             6.25,
-            "",
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Potassium Bicarbonate. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 570-571.",
             "kg"
     );
     Constituant constituant3315 = new Constituant(
@@ -953,7 +959,7 @@ public class MainActivity extends AppCompatActivity {
                     "    • Specific surface area: 0.25m2/g.\n" +
                     "    • Solubility in water: 10g/100ml.",
             3.75,
-            "",
+            "Marian E Quinn, Paul J Sheskey, Raymond C Rowe. Saccharin Sodium. In Handbook of pharmaceutical excipients, 6e ed. London: The pharmaceutical press, 2009, p. 608-610.",
             "kg"
     );
     Constituant constituant3316 = new Constituant(
