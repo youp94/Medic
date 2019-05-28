@@ -1,7 +1,6 @@
 package com.medic.Models;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class Constituant implements Serializable {
 
@@ -11,6 +10,9 @@ public class Constituant implements Serializable {
     double quantity;
     String ref;
     String unit;
+
+    public Constituant() {
+    }
 
     public Constituant(String name, String grade, String properties, double quantity, String ref, String unit) {
         this.name = name;

@@ -11,6 +11,9 @@ public class MedicalClass implements Serializable {
     private String description;
     private ArrayList<Medic> medicArrayList;
 
+    public MedicalClass() {
+    }
+
     public MedicalClass(String id, String name, String description) {
         this.id = id;
         this.name = name;

@@ -13,6 +13,9 @@ public class Formula implements Serializable {
 
     private String characs;
 
+    public Formula() {
+    }
+
     public Formula(String refBrevet, String name, String description, ArrayList<Constituant> constituants, ArrayList<Step> steps, String characs) {
         this.refBrevet = refBrevet;
         this.name = name;

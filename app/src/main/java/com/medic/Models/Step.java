@@ -8,6 +8,9 @@ public class Step implements Serializable {
     private String desc;
     private ArrayList<Equipment> equipments;
 
+    public Step() {
+    }
+
     public Step(String desc) {
         this.desc = desc;
     }

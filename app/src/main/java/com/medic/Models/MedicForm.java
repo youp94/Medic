@@ -9,6 +9,9 @@ public class MedicForm implements Serializable {
     private String description;
     private ArrayList<Process> processArrayList;
 
+    public MedicForm() {
+    }
+
     public MedicForm(String name, String description) {
         this.name = name;
         this.description = description;

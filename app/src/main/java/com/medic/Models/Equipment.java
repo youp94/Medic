@@ -7,6 +7,9 @@ public class Equipment implements Serializable {
     private String name;
     private String params;
 
+    public Equipment() {
+    }
+
     public Equipment(String name, String params) {
         this.name = name;
         this.params = params;

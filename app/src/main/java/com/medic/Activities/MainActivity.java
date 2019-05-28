@@ -3,6 +3,7 @@ package com.medic.Activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +14,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.medic.Models.Constituant;
 import com.medic.Models.Formula;
 import com.medic.Models.Medic;
@@ -25,7 +29,7 @@ import com.medic.Models.Step;
 import com.medic.R;
 
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.Iterator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -1017,7 +1021,7 @@ public class MainActivity extends AppCompatActivity {
     /**********************************************************************************************************************/
 
 
-    MainAdapter mainAdapter = new MainAdapter(this, medicalClassArrayList);
+    MainAdapter mainAdapter = null;
 
     ListView listView = null;
 
@@ -1028,7 +1032,10 @@ public class MainActivity extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+
         /********************************** form 1 ***************************************/
+
+        /*
 
         steps.add(step1);
         steps.add(step2);
@@ -1046,10 +1053,10 @@ public class MainActivity extends AppCompatActivity {
         process.setFormula(formula);
 
         processes.add(process);
-        medicForm.setProcessArrayList(processes);
+        medicForm.setProcessArrayList(processes);*/
 
         /*************************************** form 2 **********************************************/
-
+/*
         steps2.add(step21);
         steps2.add(step22);
         steps2.add(step23);
@@ -1065,9 +1072,9 @@ public class MainActivity extends AppCompatActivity {
 
         processes2.add(process2);
         medicForm2.setProcessArrayList(processes2);
-
+*/
         /************************************************* form 3 ***********************************************/
-
+/*
         steps3.add(step31);
         steps3.add(step32);
         steps3.add(step33);
@@ -1105,10 +1112,10 @@ public class MainActivity extends AppCompatActivity {
         medicForms.add(medicForm3);
         medic.setMedicFormArrayList(medicForms);
 
-
+*/
 
         /*************************************************  Medic 2 form 1 ***********************************************/
-
+/*
         steps21.add(step211);
         steps21.add(step212);
         steps21.add(step213);
@@ -1138,11 +1145,11 @@ public class MainActivity extends AppCompatActivity {
         processes21.add(process23);
         processes21.add(process24);
         medic2Form.setProcessArrayList(processes21);
-
+*/
 
         /**************************************************** Medic 3 form 1 ************************************************************/
 
-
+/*
         steps311.add(step3111);
         steps311.add(step3112);
         steps311.add(step3113);
@@ -1164,10 +1171,10 @@ public class MainActivity extends AppCompatActivity {
 
         processes311.add(process311);
         medic3Form.setProcessArrayList(processes311);
-
+*/
 
         /**************************************************** Medic 3 form 2 ****************************************************************/
-
+/*
 
         steps321.add(step3211);
         steps321.add(step3212);
@@ -1192,10 +1199,10 @@ public class MainActivity extends AppCompatActivity {
         processes321.add(process321);
         medic3Form2.setProcessArrayList(processes321);
 
-
+*/
         /*************************************************** Medic 3 form 3 ****************************************************************/
 
-
+/*
         steps331.add(step3311);
         steps331.add(step3312);
         steps331.add(step3313);
@@ -1238,14 +1245,35 @@ public class MainActivity extends AppCompatActivity {
 
         medicalClass1.setMedicArrayList(medics);
 
-        medicalClassArrayList.add(medicalClass1);
+*/
+        //medicalClassArrayList.add(medicalClass1);
 
 
+        mainAdapter = new MainAdapter(this, medicalClassArrayList);
 
         listView = findViewById(R.id.main_list);
         listView.setAdapter(mainAdapter);
 
         //mDatabase.child("Medical Classes").child(String.valueOf(medicalClass1.getId())).setValue(medicalClass1);
+
+        mDatabase.child("Medical Classes").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Iterator<DataSnapshot> i = dataSnapshot.getChildren().iterator();
+                while (i.hasNext()) {
+                    MedicalClass medicalClass = i.next().getValue(MedicalClass.class);
+                    Toast.makeText(MainActivity.this, medicalClass.getName(), Toast.LENGTH_LONG).show();
+                    medicalClassArrayList.add(medicalClass);
+                    medicalClassArrayList.get(0).getId();
+                }
+                mainAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }
 

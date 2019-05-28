@@ -8,6 +8,9 @@ public class Process implements Serializable {
     private String description;
     private Formula formula;
 
+    public Process() {
+    }
+
     public Process(String name, String description) {
         this.name = name;
         this.description = description;

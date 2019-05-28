@@ -9,6 +9,9 @@ public class Medic implements Serializable {
     private String description;
     private ArrayList<MedicForm> medicFormArrayList;
 
+    public Medic() {
+    }
+
     public Medic(String name, String description) {
         this.name = name;
         this.description = description;
