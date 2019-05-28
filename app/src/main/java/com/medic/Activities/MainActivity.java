@@ -11,7 +11,10 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.medic.Models.Constituant;
 import com.medic.Models.Formula;
 import com.medic.Models.Medic;
@@ -22,11 +25,18 @@ import com.medic.Models.Step;
 import com.medic.R;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private DatabaseReference mDatabase;
+
     /***********************  Medical class 1 ***************************************************************/
-    MedicalClass medicalClass1 = new MedicalClass("Analgesics- antipyretics – antispasmodics", "Very long description text");
+
+
+    MedicalClass medicalClass1 = null;
+
     ArrayList<MedicalClass> medicalClassArrayList = new ArrayList<>();
 
     ArrayList<Medic> medics = new ArrayList<>();
@@ -148,7 +158,13 @@ public class MainActivity extends AppCompatActivity {
     Step step5 = new Step("Coating (in option) using EUDRAGIT L100-500 and/or HPMC Opadry colorcon.");
     ArrayList<Step> steps = new ArrayList<>();
 
-    Formula formula = new Formula("","Direct compression", "Description", constituants, steps);
+    Formula formula = new Formula("", "Direct compression", "Description", constituants, steps,
+            "-Acetamenophen:\n" +
+                    "  75% by weight\n" +
+                    "-Average tablet hardness:\n" +
+                    "  6.5 Kp\n" +
+                    "-Dissolution time: ( 900 ml phosphate buffer pH=5.8 USP23)\n" +
+                    "  30 min\n");
 
     /**********************************************************************************************************************/
 
@@ -226,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
     Step step24 = new Step("Sterilizing bottles by therm.");
     ArrayList<Step> steps2 = new ArrayList<>();
 
-    Formula formula2 = new Formula("","", "Description", constituants2, steps2);
+    Formula formula2 = new Formula("", "", "Description", constituants2, steps2, "");
 
     /**********************************************************************************************************************/
 
@@ -395,7 +411,11 @@ public class MainActivity extends AppCompatActivity {
     Step step39 = new Step("The final solution was filled in bottles.");
     ArrayList<Step> steps3 = new ArrayList<>();
 
-    Formula formula3 = new Formula("","", "Description", constituants3, steps3);
+    Formula formula3 = new Formula("", "", "Description", constituants3, steps3,
+            "-pH of the liquid excipient base: \n" +
+                    "  4.5 - 6.5\n" +
+                    "-Viscosity at 25±3°C: (Measured with Brookfield viscometer spindle N°1 (LV1) at 40 RPM )\n" +
+                    "  80- 140 cPs\n");
 
     /**********************************************************************************************************************/
 
@@ -571,7 +591,7 @@ public class MainActivity extends AppCompatActivity {
     Step step219 = new Step("Coating");
     ArrayList<Step> steps21 = new ArrayList<>();
 
-    Formula formula21 = new Formula("","", "Description", constituants21, steps21);
+    Formula formula21 = new Formula("", "", "Description", constituants21, steps21, "");
 
     /**********************************************************************************************************************/
 
@@ -728,7 +748,7 @@ public class MainActivity extends AppCompatActivity {
     Step step3115 = new Step("Fill the final mixture into sachets.");
     ArrayList<Step> steps311 = new ArrayList<>();
 
-    Formula formula311 = new Formula("", "", "Description", constituants311, steps311);
+    Formula formula311 = new Formula("", "", "Description", constituants311, steps311, "");
 
     /**********************************************************************************************************************/
 
@@ -883,7 +903,7 @@ public class MainActivity extends AppCompatActivity {
     Step step3217 = new Step("Filling the final mixture into sachets.");
     ArrayList<Step> steps321 = new ArrayList<>();
 
-    Formula formula321 = new Formula("", "", "Description", constituants321, steps321);
+    Formula formula321 = new Formula("", "", "Description", constituants321, steps321, "");
 
     /**********************************************************************************************************************/
 
@@ -990,7 +1010,9 @@ public class MainActivity extends AppCompatActivity {
     Step step3317 = new Step("The solution is particle-free filtrated.");
     ArrayList<Step> steps331 = new ArrayList<>();
 
-    Formula formula331 = new Formula("", "", "Description", constituants331, steps331);
+    Formula formula331 = new Formula("", "", "Description", constituants331, steps331,
+            "-Relative density of the solution:\n" +
+                    "  1.0215 g/cm3.\n");
 
     /**********************************************************************************************************************/
 
@@ -1003,6 +1025,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         /********************************** form 1 ***************************************/
 
@@ -1206,6 +1230,12 @@ public class MainActivity extends AppCompatActivity {
         medics.add(medic);
         medics.add(medic2);
         medics.add(medic3);
+
+
+        Random rand = new Random();
+        int n = rand.nextInt(50000000);
+        medicalClass1 = new MedicalClass(String.valueOf(n), "Analgesics- antipyretics – antispasmodics", "Very long description text");
+
         medicalClass1.setMedicArrayList(medics);
 
         medicalClassArrayList.add(medicalClass1);
@@ -1214,6 +1244,8 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.main_list);
         listView.setAdapter(mainAdapter);
+
+        //mDatabase.child("Medical Classes").child(String.valueOf(medicalClass1.getId())).setValue(medicalClass1);
     }
 }
 
@@ -1254,18 +1286,20 @@ class MainAdapter extends BaseAdapter{
         Button button;
 
         titleText = view.findViewById(R.id.class_title);
-        descText = view.findViewById(R.id.class_description);
         button = view.findViewById(R.id.class_button);
         button.setText("Voir Médicaments");
 
         titleText.setText(medicalClass.getName());
-        descText.setText(medicalClass.getDescription());
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, MedicActivity.class);
-                intent.putExtra("medicList", medicalClass.getMedicArrayList());
-                context.startActivity(intent);
+                if (medicalClass.getMedicArrayList() != null) {
+                    Intent intent = new Intent(context, MedicActivity.class);
+                    intent.putExtra("medicList", medicalClass.getMedicArrayList());
+                    context.startActivity(intent);
+                } else {
+                    Toast.makeText(context, "Page under construction", Toast.LENGTH_LONG).show();
+                }
             }
         });
 

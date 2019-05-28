@@ -80,12 +80,10 @@ class ProcessAdapter extends BaseAdapter{
         Button button;
 
         titleText = view.findViewById(R.id.class_title);
-        descText = view.findViewById(R.id.class_description);
         button = view.findViewById(R.id.class_button);
         button.setText("Voir Formule");
 
         titleText.setText(medic.getName());
-        descText.setText(medic.getDescription());
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

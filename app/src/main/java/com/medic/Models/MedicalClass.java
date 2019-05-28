@@ -5,9 +5,17 @@ import java.util.ArrayList;
 
 public class MedicalClass implements Serializable {
 
+
+    private String id;
     private String name;
     private String description;
     private ArrayList<Medic> medicArrayList;
+
+    public MedicalClass(String id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
 
     public MedicalClass(String name, String description) {
         this.name = name;
@@ -42,5 +50,13 @@ public class MedicalClass implements Serializable {
 
     public void setMedicArrayList(ArrayList<Medic> medicArrayList) {
         this.medicArrayList = medicArrayList;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

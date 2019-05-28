@@ -49,6 +49,7 @@ public class FormulaActivity extends AppCompatActivity {
                 if (formula.getSteps() != null) {
                     Intent intent = new Intent(FormulaActivity.this, FormulaProcessActivity.class);
                     intent.putExtra("steps", formula.getSteps());
+                    intent.putExtra("characs", formula.getCharacs());
                     startActivity(intent);
                 } else {
                     Toast.makeText(FormulaActivity.this, "Page under construction", Toast.LENGTH_LONG).show();
