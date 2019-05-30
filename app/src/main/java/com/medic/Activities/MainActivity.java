@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<MedicalClass> medicalClassArrayList = new ArrayList<>();
 
+    /**********************************************************************************************************************/
+
+
     MainAdapter mainAdapter = null;
 
     ListView listView = null;
@@ -54,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 Iterator<DataSnapshot> i = dataSnapshot.getChildren().iterator();
                 while (i.hasNext()) {
                     MedicalClass medicalClass = i.next().getValue(MedicalClass.class);
+                    Toast.makeText(MainActivity.this, medicalClass.getName(), Toast.LENGTH_LONG).show();
                     medicalClassArrayList.add(medicalClass);
+                    medicalClassArrayList.get(0).getId();
                 }
                 mainAdapter.notifyDataSetChanged();
             }
@@ -69,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
 
 class MainAdapter extends BaseAdapter{
 
-    private Context context;
-    private ArrayList<MedicalClass> medicalClassArrayList;
+    Context context;
+    ArrayList<MedicalClass> medicalClassArrayList;
 
-    MainAdapter(Context context, ArrayList<MedicalClass> medicalClassArrayList) {
+    public MainAdapter(Context context, ArrayList<MedicalClass> medicalClassArrayList) {
         this.context = context;
         this.medicalClassArrayList = medicalClassArrayList;
     }
