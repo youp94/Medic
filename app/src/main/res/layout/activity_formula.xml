@@ -33,7 +33,10 @@
             android:text="View process"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:background="@drawable/border_back_button"
+            android:padding="10dp" />
     </RelativeLayout>
 
 
