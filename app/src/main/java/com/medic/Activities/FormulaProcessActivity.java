@@ -93,9 +93,15 @@ class StepsAdapter extends BaseAdapter {
 
         TextView titleText;
         TextView gradText;
+        TextView params;
 
         titleText = view.findViewById(R.id.page_title);
         gradText = view.findViewById(R.id.page_description);
+        params = view.findViewById(R.id.equip_params);
+
+        if (constituant.getEquipments() == null) {
+            params.setText("Under construction");
+        }
 
         titleText.setText("Step: " + (position + 1));
         String grade = "Description: \n" + constituant.getDesc();
