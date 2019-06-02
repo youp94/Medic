@@ -81,7 +81,7 @@ class MedicFormAdapter extends BaseAdapter{
 
         titleText = view.findViewById(R.id.class_title);
         button = view.findViewById(R.id.class_button);
-        button.setText("Voir Precess");
+        button.setText("view process");
 
         titleText.setText(medic.getName());
         button.setOnClickListener(new View.OnClickListener() {
