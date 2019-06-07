@@ -1,12 +1,11 @@
 package com.medic.Models;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class Step implements Serializable {
 
     private String desc;
-    private ArrayList<Equipment> equipments;
+    Equipment equipments;
 
     public Step() {
     }
@@ -15,7 +14,7 @@ public class Step implements Serializable {
         this.desc = desc;
     }
 
-    public Step(String desc, ArrayList<Equipment> equipments) {
+    public Step(String desc, Equipment equipments) {
         this.desc = desc;
         this.equipments = equipments;
     }
@@ -28,11 +27,11 @@ public class Step implements Serializable {
         this.desc = desc;
     }
 
-    public ArrayList<Equipment> getEquipments() {
+    public Equipment getEquipments() {
         return equipments;
     }
 
-    public void setEquipments(ArrayList<Equipment> equipments) {
+    public void setEquipments(Equipment equipments) {
         this.equipments = equipments;
     }
 }

@@ -11,11 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.medic.Models.Step;
 import com.medic.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -94,13 +96,26 @@ class StepsAdapter extends BaseAdapter {
         TextView titleText;
         TextView gradText;
         TextView params;
+        ImageView imageView;
 
         titleText = view.findViewById(R.id.page_title);
         gradText = view.findViewById(R.id.page_description);
         params = view.findViewById(R.id.equip_params);
+        imageView = view.findViewById(R.id.equip_image);
 
         if (constituant.getEquipments() == null) {
             params.setText("Under construction");
+        } else {
+            if (!constituant.getEquipments().getParams().equals("")) {
+                params.setText(constituant.getEquipments().getParams());
+            } else {
+                params.setText("No parameters found");
+            }
+
+            if (!constituant.getEquipments().getName().equals("")) {
+                imageView.setImageDrawable(null);
+                Picasso.get().load(constituant.getEquipments().getName()).into(imageView);
+            }
         }
 
         titleText.setText("Step: " + (position + 1));
