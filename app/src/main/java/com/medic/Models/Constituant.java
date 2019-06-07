@@ -10,8 +10,25 @@ public class Constituant implements Serializable {
     double quantity;
     String ref;
     String unit;
+    String dcs;
+    String ftir;
+    String sem;
+    String xrd;
 
     public Constituant() {
+    }
+
+    public Constituant(String name, String grade, String properties, double quantity, String ref, String unit, String dcs, String ftir, String sem, String xrd) {
+        this.name = name;
+        this.grade = grade;
+        this.properties = properties;
+        this.quantity = quantity;
+        this.ref = ref;
+        this.unit = unit;
+        this.dcs = dcs;
+        this.ftir = ftir;
+        this.sem = sem;
+        this.xrd = xrd;
     }
 
     public Constituant(String name, String grade, String properties, double quantity, String ref, String unit) {
@@ -77,5 +94,37 @@ public class Constituant implements Serializable {
 
     public void setUnit(String unit) {
         this.unit = unit;
+    }
+
+    public String getDcs() {
+        return dcs;
+    }
+
+    public void setDcs(String dcs) {
+        this.dcs = dcs;
+    }
+
+    public String getFtir() {
+        return ftir;
+    }
+
+    public void setFtir(String ftir) {
+        this.ftir = ftir;
+    }
+
+    public String getSem() {
+        return sem;
+    }
+
+    public void setSem(String sem) {
+        this.sem = sem;
+    }
+
+    public String getXrd() {
+        return xrd;
+    }
+
+    public void setXrd(String xrd) {
+        this.xrd = xrd;
     }
 }

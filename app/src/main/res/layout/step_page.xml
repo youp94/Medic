@@ -46,7 +46,7 @@
             android:orientation="horizontal"
             android:layout_margin="25dp">
 
-            <ImageView
+            <com.felipecsl.gifimageview.library.GifImageView
                 android:id="@+id/equip_image"
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"

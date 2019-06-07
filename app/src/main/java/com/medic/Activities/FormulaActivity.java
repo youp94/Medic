@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -90,7 +91,7 @@ class ConstituantsAdapter extends BaseAdapter {
     public View getView(int position, final View convertView, ViewGroup parent) {
         final Constituant constituant = constituants.get(position);
 
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         @SuppressLint({"ViewHolder", "InflateParams"}) View view = inflater.inflate(R.layout.constituant_item,null, false);
 
         TextView titleText;
@@ -98,18 +99,34 @@ class ConstituantsAdapter extends BaseAdapter {
         TextView quanText;
         Button refButton;
         Button propsButton;
+        ImageButton imageProps;
 
         titleText = view.findViewById(R.id.constituant_title);
         gradText = view.findViewById(R.id.constituant_grade);
         quanText = view.findViewById(R.id.constituant_quantity);
         refButton = view.findViewById(R.id.constituant_ref);
         propsButton = view.findViewById(R.id.constituant_prop);
+        imageProps = view.findViewById(R.id.constituant_image);
+
+        if (position == 0) {
+            imageProps.setVisibility(View.VISIBLE);
+        }
 
         titleText.setText(constituant.getName());
         String grade = "Grade: " + constituant.getGrade();
         gradText.setText(grade);
         String quantity = "Quantity: " + constituant.getQuantity()+" "+constituant.getUnit();
         quanText.setText(quantity);
+
+        imageProps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, PropertiesActivity.class);
+                intent.putExtra("const", constituant);
+                context.startActivity(intent);
+            }
+        });
+
         refButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

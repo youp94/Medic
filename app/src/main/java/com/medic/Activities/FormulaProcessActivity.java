@@ -11,10 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.felipecsl.gifimageview.library.GifImageView;
 import com.medic.Models.Step;
 import com.medic.R;
 import com.squareup.picasso.Picasso;
@@ -96,7 +96,7 @@ class StepsAdapter extends BaseAdapter {
         TextView titleText;
         TextView gradText;
         TextView params;
-        ImageView imageView;
+        GifImageView imageView;
 
         titleText = view.findViewById(R.id.page_title);
         gradText = view.findViewById(R.id.page_description);
@@ -116,6 +116,7 @@ class StepsAdapter extends BaseAdapter {
             if (!constituant.getEquipments().getName().equals("")) {
                 imageView.setImageDrawable(null);
                 Picasso.get().load(constituant.getEquipments().getName()).into(imageView);
+                imageView.startAnimation();
             } else {
                 imageView.setBackgroundResource(R.drawable.ic_block_black_24dp);
             }

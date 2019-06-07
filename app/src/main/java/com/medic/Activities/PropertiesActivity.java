@@ -1,83 +1,51 @@
 package com.medic.Activities;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 
 import com.medic.Models.Constituant;
-import com.medic.Models.Formula;
 import com.medic.R;
-
-import java.util.ArrayList;
+import com.squareup.picasso.Picasso;
 
 public class PropertiesActivity extends AppCompatActivity {
 
 
-    ArrayList<String> properties = null;
+    ImageView dsc;
+    ImageView ftir;
+    ImageView sem;
+    ImageView xrd;
 
-    PropertyAdapter propertyAdapter = null;
-    ListView listView = null;
+    Constituant constituant;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_properties);
 
-        properties = (ArrayList<String>) getIntent().getSerializableExtra("props");
+        constituant = (Constituant) getIntent().getSerializableExtra("const");
 
-        listView = findViewById(R.id.properties_list);
-        propertyAdapter = new PropertyAdapter(this, properties);
-        listView.setAdapter(propertyAdapter);
-    }
-}
+        dsc = findViewById(R.id.dsc);
+        ftir = findViewById(R.id.ftir);
+        sem = findViewById(R.id.sem);
+        xrd = findViewById(R.id.xrd);
 
-class PropertyAdapter extends BaseAdapter {
+        if (!constituant.getDcs().equals("")) {
+            Picasso.get().load(constituant.getDcs()).into(dsc);
+        }
 
-    private Context context;
-    private ArrayList<String> properties;
+        if (!constituant.getFtir().equals("")) {
+            Picasso.get().load(constituant.getFtir()).into(ftir);
+        }
 
-    PropertyAdapter(Context context, ArrayList<String> medicalClassArrayList) {
-        this.context = context;
-        this.properties = medicalClassArrayList;
-    }
+        if (!constituant.getSem().equals("")) {
+            Picasso.get().load(constituant.getSem()).into(sem);
+        }
 
-    @Override
-    public int getCount() {
-        return properties.size();
-    }
+        if (!constituant.getXrd().equals("")) {
+            Picasso.get().load(constituant.getXrd()).into(xrd);
+        }
 
-    @Override
-    public Object getItem(int position) {
-        return properties.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    @Override
-    public View getView(int position, final View convertView, ViewGroup parent) {
-        final String property = properties.get(position);
-
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        @SuppressLint({"ViewHolder", "InflateParams"}) View view = inflater.inflate(R.layout.properties_item,null, false);
-
-        TextView gradText;
-        gradText = view.findViewById(R.id.property_description);
-        gradText.setText(property);
-
-        return view;
     }
 }
