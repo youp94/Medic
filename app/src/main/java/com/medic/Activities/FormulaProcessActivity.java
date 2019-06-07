@@ -116,6 +116,8 @@ class StepsAdapter extends BaseAdapter {
             if (!constituant.getEquipments().getName().equals("")) {
                 imageView.setImageDrawable(null);
                 Picasso.get().load(constituant.getEquipments().getName()).into(imageView);
+            } else {
+                imageView.setBackgroundResource(R.drawable.ic_block_black_24dp);
             }
         }
 
