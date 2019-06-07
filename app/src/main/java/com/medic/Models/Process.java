@@ -11,6 +11,10 @@ public class Process implements Serializable {
     public Process() {
     }
 
+    public Process(String name) {
+        this.name = name;
+    }
+
     public Process(String name, String description) {
         this.name = name;
         this.description = description;

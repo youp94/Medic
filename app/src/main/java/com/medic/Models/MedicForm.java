@@ -12,6 +12,10 @@ public class MedicForm implements Serializable {
     public MedicForm() {
     }
 
+    public MedicForm(String name) {
+        this.name = name;
+    }
+
     public MedicForm(String name, String description) {
         this.name = name;
         this.description = description;

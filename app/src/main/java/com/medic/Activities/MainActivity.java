@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
 
-    MedicalClass medicalClass1 = null;
-
     ArrayList<MedicalClass> medicalClassArrayList = new ArrayList<>();
 
     /**********************************************************************************************************************/
@@ -112,7 +110,7 @@ class MainAdapter extends BaseAdapter{
 
         titleText = view.findViewById(R.id.class_title);
         button = view.findViewById(R.id.class_button);
-        button.setText("View Drugs");
+        button.setText("Voir Médicaments");
 
         titleText.setText(medicalClass.getName());
         button.setOnClickListener(new View.OnClickListener() {
