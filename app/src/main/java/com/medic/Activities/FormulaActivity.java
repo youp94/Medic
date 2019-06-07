@@ -121,9 +121,13 @@ class ConstituantsAdapter extends BaseAdapter {
         imageProps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, PropertiesActivity.class);
-                intent.putExtra("const", constituant);
-                context.startActivity(intent);
+                if (constituant.getXrd().equals("") && constituant.getFtir().equals("") && constituant.getSem().equals("") && constituant.getDcs().equals("")) {
+                    Toast.makeText(context, "No properties", Toast.LENGTH_LONG).show();
+                } else {
+                    Intent intent = new Intent(context, PropertiesActivity.class);
+                    intent.putExtra("const", constituant);
+                    context.startActivity(intent);
+                }
             }
         });
 
