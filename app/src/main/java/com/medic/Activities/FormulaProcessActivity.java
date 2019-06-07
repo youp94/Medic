@@ -105,6 +105,7 @@ class StepsAdapter extends BaseAdapter {
 
         if (constituant.getEquipments() == null) {
             params.setText("No parameters found");
+            imageView.setBackgroundResource(R.drawable.ic_block_black_24dp);
         } else {
             if (!constituant.getEquipments().getParams().equals("")) {
                 params.setText(constituant.getEquipments().getParams());
