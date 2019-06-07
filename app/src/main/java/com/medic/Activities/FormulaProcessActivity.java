@@ -104,7 +104,7 @@ class StepsAdapter extends BaseAdapter {
         imageView = view.findViewById(R.id.equip_image);
 
         if (constituant.getEquipments() == null) {
-            params.setText("Under construction");
+            params.setText("No parameters found");
         } else {
             if (!constituant.getEquipments().getParams().equals("")) {
                 params.setText(constituant.getEquipments().getParams());
