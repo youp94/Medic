@@ -29,6 +29,7 @@ public class FormulaActivity extends AppCompatActivity {
 
     ConstituantsAdapter mainAdapter = null;
     ListView listView = null;
+    TextView brevet = null;
 
     Button button = null;
 
@@ -42,6 +43,9 @@ public class FormulaActivity extends AppCompatActivity {
         listView = findViewById(R.id.constituant_list);
         mainAdapter = new ConstituantsAdapter(this, formula.getConstituants());
         listView.setAdapter(mainAdapter);
+
+        brevet = findViewById(R.id.brevet);
+        brevet.setText(formula.getRefBrevet());
 
         button = findViewById(R.id.formula_process);
         button.setOnClickListener(new View.OnClickListener() {

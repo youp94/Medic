@@ -15,6 +15,14 @@
         android:textColor="#000"
         android:gravity="center"
         android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/brevet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="brevert"
+        android:layout_marginLeft="30dp"
+        android:textSize="15sp" />
     <ListView
         android:id="@+id/constituant_list"
         android:layout_width="match_parent"
