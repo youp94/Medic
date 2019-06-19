@@ -7,16 +7,13 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
@@ -29,16 +26,9 @@
 
             <ImageView
                 android:id="@+id/dsc"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:layout_margin="15dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,25 +40,9 @@
 
             <ImageView
                 android:id="@+id/ftir"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:layout_margin="15dp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -80,16 +54,9 @@
 
             <ImageView
                 android:id="@+id/sem"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:layout_margin="15dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -101,12 +68,14 @@
 
             <ImageView
                 android:id="@+id/xrd"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:layout_margin="15dp" />
+
 
         </LinearLayout>
 
-    </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
