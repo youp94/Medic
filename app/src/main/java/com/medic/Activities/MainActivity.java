@@ -2,6 +2,8 @@ package com.medic.Activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     MainAdapter mainAdapter = null;
 
     ListView listView = null;
+    TextView noInternet = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +51,18 @@ public class MainActivity extends AppCompatActivity {
 
         mainAdapter = new MainAdapter(this, medicalClassArrayList);
 
+        noInternet = findViewById(R.id.no_internet);
+
         listView = findViewById(R.id.main_list);
         listView.setAdapter(mainAdapter);
+
+        if (isNetworkAvailable()) {
+            listView.setVisibility(View.VISIBLE);
+            noInternet.setVisibility(View.GONE);
+        } else {
+            listView.setVisibility(View.GONE);
+            noInternet.setVisibility(View.VISIBLE);
+        }
 
         mDatabase.child("Medical Classes").addValueEventListener(new ValueEventListener() {
             @Override
@@ -69,6 +82,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }
 
